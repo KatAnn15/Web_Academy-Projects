@@ -1,0 +1,58 @@
+.item {
+  width: 100px;
+  position: absolute;
+}
+
+.basics {
+  left: 30%;
+  top: 10%;
+}
+
+.pro {
+  left: 50%;
+  top: 25%;
+}
+
+.master {
+  left: 75%;
+  top: 50%;
+}
+
+.wizard {
+  left: 40%;
+  top: 70%;
+}
+
+.openModalBtn {
+  padding: 10px;
+  box-sizing: border-box;
+  border: 10px solid rgba(128, 128, 128, 0.219);
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.openModalBtn:hover {
+  border: 10px solid rgba(255, 0, 0, 0.253);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.432);
+}
+
+.openModalBtn span {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eggFigure {
+  width: 45px;
+  height: 55px;
+  background-color: white;
+  border-radius: 50% 60% 50% 50%/70% 70% 40% 40%;
+  transform: translate(-50%, -5%);
+  background-image: url("../assets/images/egg-background.jpg");
+  background-size: 350%;
+  background-position: 27%;
+}
+
+/*# sourceMappingURL=items.css.map */

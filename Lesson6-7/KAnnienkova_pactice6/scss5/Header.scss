@@ -1,0 +1,94 @@
+@import "Mixines.scss";
+
+.global-header {
+  background-color: black;
+  &__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    height: 50px;
+  }
+}
+a {
+  color: white;
+}
+.navbar {
+  display: flex;
+  position: relative;
+  &__list {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    color: white;
+  }
+  &__item {
+    padding-left: 23px;
+  }
+  &__menu-icon {
+    position: absolute;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    transform: translate(-50%, 50%);
+    display: none;
+    &::before {
+      @include menu-icon;
+      top: #{calc(25% - 2px)};
+    }
+    &::after {
+      @include menu-icon;
+      bottom: #{calc(25% - 2px)};
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .global-header__wrapper {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .navbar {
+    width: 100%;
+    &__list {
+      flex-direction: column;
+      width: 250px;
+      background-color: rgba(138, 156, 132, 0.609);
+      height: 100vh;
+      visibility: hidden;
+      transform: translateX(-250px);
+      transition: transform 1s;
+    }
+    &__item {
+      width: 100%;
+      padding: 15px 0;
+      cursor: pointer;
+      &:first-child {
+        margin-top: 40px;
+      }
+      &:hover {
+        box-shadow: 0 0 15px white;
+      }
+    }
+    &__menu-icon {
+      display: block;
+    }
+    &_active {
+      .navbar {
+        &__menu-icon {
+          &::before {
+            top: #{calc(50% - 1px)};
+            transform: rotate(45deg);
+          }
+          &::after {
+            bottom: #{calc(50% - 1px)};
+            transform: rotate(-45deg);
+          }
+        }
+        &__list {
+          visibility: visible;
+          transform: translate(-15px);
+        }
+      }
+    }
+  }
+}

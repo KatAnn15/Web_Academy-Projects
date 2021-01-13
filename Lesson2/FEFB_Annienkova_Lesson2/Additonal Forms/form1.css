@@ -1,0 +1,131 @@
+html {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2vh;
+  line-height: 27px;
+}
+body,
+ul,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0%;
+  margin: 0%;
+  font-weight: 300;
+}
+li {
+  list-style: none;
+}
+body {
+  text-align: center;
+}
+.menu {
+  width: 58%;
+  margin: auto;
+}
+.header-menu {
+  width: 100%;
+  display: table;
+  box-sizing: border-box;
+}
+li {
+  display: table-cell;
+  color: #828282;
+}
+.header-menu li:first-child {
+  font-weight: 800;
+  color: black;
+}
+.header-menu {
+  margin-top: 5.38%;
+}
+hr {
+  width: 87%;
+  margin-top: 2vh;
+  margin-bottom: 3vh;
+}
+.above-the-fold {
+  width: 50%;
+  margin: auto;
+  text-align: left;
+}
+.above-the-fold-text {
+  display: table;
+  box-sizing: border-box;
+  width: 100%;
+}
+h1 {
+  line-height: 4.3vh;
+  display: table-cell;
+  width: 17%;
+}
+.above-the-fold-text h3 {
+  display: table-cell;
+  padding-left: 25%;
+}
+.lang {
+  transform: rotate(-90deg);
+  display: table-cell;
+  width: 10%;
+}
+.my-img {
+  margin: auto;
+  margin-top: 5%;
+  width: 100%;
+}
+
+.about-me {
+  width: auto;
+  margin-top: 6%;
+  padding: 8%;
+  background-color: beige;
+}
+h2 {
+  font-weight: bold;
+  padding-bottom: 4%;
+}
+.intro {
+  display: inline-block;
+  width: 50%;
+}
+.start {
+  display: inline-block;
+  width: 95%;
+  padding-bottom: 2vh;
+}
+.body {
+  display: inline-block;
+  width: 85%;
+  padding-bottom: 2vh;
+}
+.finish {
+  display: inline-block;
+  width: 74%;
+}
+.contacts {
+  margin-top: 6%;
+  padding: 8%;
+  width: 35%;
+  margin: 0 auto;
+  text-align: center;
+}
+.send-message {
+  margin-top: 2vh;
+  padding: 2% 6%;
+  background-color: black;
+  color: white;
+  border-radius: 5vh;
+}
+.icons {
+  display: table;
+  box-sizing: border-box;
+  padding-top: 4vh;
+  margin: auto;
+}
+.icons li {
+  display: table-cell;
+  padding: 2vh;
+}

@@ -1,0 +1,39 @@
+.red {
+  background-color: rgb(165, 53, 53);
+  grid-column: 2 / span 2;
+}
+.blue {
+  background-color: rgb(40, 40, 173);
+  grid-column: 2;
+}
+.yellow {
+  background-color: rgb(187, 187, 39);
+}
+.black {
+  background-color: black;
+  grid-column: 2 / span 2;
+}
+.pink {
+  background-color: rgb(206, 66, 90);
+  grid-column: 3 / span 1;
+}
+.aqua {
+  background-color: rgb(85, 233, 233);
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+.green {
+  background-color: rgb(38, 138, 38);
+  grid-row: 5;
+  grid-column: 3;
+}
+.fuchsia {
+  background-color: fuchsia;
+  grid-column: 2;
+  grid-row: 5;
+}
+.orange {
+  background-color: rgb(255, 193, 77);
+  grid-column: 2;
+  grid-row: 4;
+}

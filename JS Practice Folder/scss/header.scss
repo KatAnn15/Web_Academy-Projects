@@ -1,0 +1,46 @@
+@import "mixines.scss";
+.header__bar {
+  position: fixed;
+  width: 100vw;
+  background-color: white;
+  z-index: 1;
+
+  .logo {
+    font-size: 23px;
+    font-weight: 200;
+    color: rgb(37, 33, 33);
+    text-shadow: 0.5px 0 0 rgb(82, 85, 97);
+    padding: 20px 0;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.335);
+  }
+
+  .header__navbar {
+    height: 40px;
+  }
+  .menu__list {
+    display: flex;
+    max-width: 1200px;
+    padding: 0 60px;
+    @include headerDesign;
+  }
+  .banner {
+    height: auto;
+    height: 35px;
+    background-color: black;
+  }
+  .banner__content {
+    display: flex;
+    max-width: 500px;
+    @include headerDesign;
+    li {
+      width: 150px;
+      a {
+        color: white;
+        text-shadow: 1px 0 0 rgba(255, 255, 255, 0.479);
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+}

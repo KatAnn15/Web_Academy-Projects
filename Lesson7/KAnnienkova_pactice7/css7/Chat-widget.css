@@ -1,0 +1,60 @@
+.chat-widget {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  background-color: black;
+  color: white;
+  width: 45%;
+  height: 60px;
+  cursor: pointer;
+}
+.chat-widget .fa-comments {
+  display: none;
+}
+.chat-widget .fa-angle-up {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 25px;
+}
+.chat-widget .chat__title {
+  font-size: 18px;
+  display: flex;
+  padding: 15px 0 5px 15px;
+  font-weight: 100;
+}
+.chat-widget .chat__sub-title {
+  font-size: 10px;
+  font-weight: 100;
+  display: flex;
+  padding-left: 15px;
+}
+.chat-widget .fa-bolt {
+  font-size: large;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 575px) {
+  .chat-widget {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .chat-widget .chat__title,
+.chat-widget .chat__sub-title,
+.chat-widget .fa-angle-up {
+    display: none;
+  }
+  .chat-widget .fa-comments {
+    display: block;
+    font-size: 44px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*# sourceMappingURL=Chat-widget.css.map */

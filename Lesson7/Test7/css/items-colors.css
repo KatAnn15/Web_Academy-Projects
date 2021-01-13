@@ -1,0 +1,49 @@
+.red {
+  background-color: #a53535;
+  grid-column: 2/span 2;
+}
+
+.blue {
+  background-color: #2828ad;
+  grid-column: 2;
+}
+
+.yellow {
+  background-color: #bbbb27;
+}
+
+.black {
+  background-color: black;
+  grid-column: 2/span 2;
+}
+
+.pink {
+  background-color: #ce425a;
+  grid-column: 3/span 1;
+}
+
+.aqua {
+  background-color: #55e9e9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+
+.green {
+  background-color: #268a26;
+  grid-row: 5;
+  grid-column: 3;
+}
+
+.fuchsia {
+  background-color: fuchsia;
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.orange {
+  background-color: #ffc14d;
+  grid-column: 2;
+  grid-row: 4;
+}
+
+/*# sourceMappingURL=items-colors.css.map */

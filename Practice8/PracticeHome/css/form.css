@@ -1,0 +1,37 @@
+.comments-form {
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  padding: 60px 150px 50px 150px;
+  background-color: rgba(128, 128, 128, 0.082);
+}
+.comments-form .author-name {
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.comments-form .post-title {
+  width: 500px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 10px;
+}
+.comments-form .post-input {
+  height: 200px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.comments-form .submit-btn {
+  width: 200px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  font-size: 14px;
+}
+
+/*# sourceMappingURL=form.css.map */

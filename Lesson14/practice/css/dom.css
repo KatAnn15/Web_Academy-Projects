@@ -1,0 +1,70 @@
+.container {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin: 100px auto;
+}
+.container .movie-item {
+  position: relative;
+  overflow: hidden;
+  max-height: 400px;
+}
+.container .movie-item .movie-img {
+  width: 100%;
+}
+.container .movie-item .movie-rating {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #ff6600;
+}
+.container .movie-item .movie-label {
+  position: absolute;
+  left: -35px;
+  top: 0;
+  background-color: red;
+  width: 160px;
+  padding: 7px;
+  transform: rotate(-40deg);
+  text-align: center;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
+}
+.container .movie-item .movie-info {
+  width: 100%;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.151);
+  height: 170px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.container .movie-item .movie-info .movie-title {
+  margin: 0;
+}
+.container .movie-item .movie-info .movie-description {
+  font-size: 13px;
+}
+.container .movie-item .movie-info .movie-action-btn {
+  width: 90%;
+  position: absolute;
+  bottom: 15px;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container .movie-item .movie-info .movie-action-btn:hover {
+  box-shadow: 0 0 10px white;
+}
+
+.expanded {
+  transform: translate(0, -100%);
+  transition: all 0.3s;
+}
+
+/*# sourceMappingURL=dom.css.map */

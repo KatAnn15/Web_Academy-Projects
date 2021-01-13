@@ -1,0 +1,67 @@
+.global-footer {
+  background-color: black;
+  color: white;
+  margin-bottom: 47px;
+}
+.global-footer a {
+  color: white;
+}
+.global-footer .footer-links {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.global-footer .footer-links a,
+.global-footer .footer-links .contact-number {
+  padding-top: 10px;
+}
+.global-footer .footer-links .footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25px;
+}
+.global-footer .contact-form-wrapper {
+  width: 90%;
+  margin: auto;
+  padding: 50px 0 100px 25px;
+  text-align: left;
+}
+.global-footer .contact-form-wrapper .contact-form__cta {
+  display: block;
+  margin-bottom: 35px;
+}
+.global-footer .contact-form-wrapper .contact-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+}
+.global-footer .contact-form-wrapper .contact-form .input-container {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.global-footer .contact-form-wrapper .contact-form .input-container .contact-form__input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 15px;
+  color: aliceblue;
+  width: 100%;
+}
+.global-footer .contact-form-wrapper .contact-form .input-container .contact-form__input::placeholder {
+  color: rgba(255, 255, 255, 0.575);
+}
+.global-footer .contact-form-wrapper .contact-form .contact-form__action-btn {
+  font-size: 16px;
+  height: 40px;
+  font-weight: 800;
+  padding: 0 25px;
+}
+
+/*# sourceMappingURL=Footer.css.map */

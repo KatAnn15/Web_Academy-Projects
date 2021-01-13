@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cssm4/scssm4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Collapsed Menu</title>
+</head>
+<body>
+    <div class="global-header">
+        <div class="navbar" id="navbar">
+            <button class="menu-toggle" id="btn"> <span class="menu-icon"></span></button>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="#">Store</a></li>
+                <li class="navbar__item"><a href="#">Home</a></li>
+                <li class="navbar__item"><a href="#">About</a></li>
+                <li class="navbar__item"><a href="#">Contact us <i class="fa fa-star checked"></i></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="global-main">
+        <div class="global-container">
+            <div class="widget-container">
+                <h1 class="widget__title">John Doe</h1>
+                <div class="widget__content">
+                    <ul class="grid">
+                       <li class="col-2 col-xs-6">
+                           <a class="widget__item profile_pink" href="#"><img src="./Assets/Images/House.svg" alt="" class="item__img"><h2>Profile</h2></a>
+                        </li>
+                       <li class=" col-2 col-xs-6">
+                           <a class="widget__item profile_aqua" href="#"><img src="./Assets/Images/Chair.svg" alt="" class="item__img"><h2>Profile</h2></a>
+                        </li>
+                       <li class="col-4 col-xs-12">
+                           <a class="widget__item photos_orange " href="#"><img src="./Assets/Images/Images.svg" alt="" class="item__img"><h2>Photos</h2></a>
+                        </li>
+                       <li class=" col-2 col-xs-6">
+                           <a class="widget__item other_green" href="#"><img src="./Assets/Images/Images.svg" alt="" class="item__img"><h2>Other</h2></a>
+                        </li>
+                       <li class=" col-2 col-xs-6">
+                           <a class="widget__item other_red" href="#"><img src="./Assets/Images/Images.svg" alt="" class="item__img"><h2>Other</h2></a>
+                        </li>
+                       <li class=" col-4 col-xs-12">
+                           <a class="widget__item about_green" href="#"><img src="./Assets/Images/Chair.svg" alt="" class="item__img"><h2>About</h2></a>
+                        </li>
+                       <li class=" col-6 col-xs-12">
+                           <a class="widget__item nouncy" href="#"><img src="./Assets/Images/Nouncy.jpg" alt="" class="item__img"><h2>Some cool header</h2></a>
+                        </li>
+                       <li class=" col-2 col-xs-12">
+                           <a class="widget__item other_aqua" href="#"><img src="./Assets/Images/Images.svg" alt="" class="item__img"><h2>Other</h2></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const btn = document.querySelector("#btn");
+        const navbar = document.querySelector("#navbar");
+        btn.addEventListener('click', () => {
+            navbar.classList.toggle("navbar_active");
+        });
+    </script>
+</body>
+</html>

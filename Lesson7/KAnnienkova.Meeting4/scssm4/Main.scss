@@ -1,0 +1,134 @@
+.widget__title {
+  position: relative;
+  color: white;
+  margin-bottom: 25px;
+  text-align: left;
+  font-size: 42px;
+}
+.widget-container {
+  width: 45%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+.widget__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  &:hover {
+    box-shadow: 0 0 5px rgb(2, 11, 49);
+  }
+}
+h2 {
+  color: white;
+  font-size: 15px;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+.grid {
+  display: block;
+  width: 100%;
+  margin: auto;
+
+  .profile_pink {
+    background-color: #af16b3;
+  }
+  .profile_aqua {
+    background-color: #16b3a9;
+  }
+  .photos_orange {
+    background-color: #d09d18;
+  }
+  .other_green {
+    background-color: #16b34b;
+  }
+  .other_red {
+    background-color: #b31616;
+  }
+  .about_green {
+    background-color: #48d018;
+  }
+  .nouncy {
+    background-color: black;
+    text-align: left;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 100%;
+    .item__img {
+      width: 130px;
+      height: 130px;
+      padding: 2px;
+    }
+    h2 {
+      position: relative;
+      width: 100%;
+      margin: auto;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .other_aqua {
+    background-color: #16b3a9;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .widget-container {
+    width: 100%;
+    padding: 50px;
+  }
+  .widget__item {
+    height: 120px;
+    .item__img {
+      width: 50px;
+      height: 60%;
+    }
+    h2 {
+      font-size: 16px;
+    }
+  }
+  .nouncy {
+    height: 120px;
+    .item__img {
+      display: none;
+    }
+    h2 {
+      line-height: 60px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .widget__item {
+    height: 100px;
+    .item__img {
+      width: 40px;
+      height: 50%;
+    }
+  }
+}
+@media screen and (max-width: 575px) {
+  .widget-container {
+    transform: translate(0);
+    top: 100px;
+    left: 0;
+  }
+  .widget__item {
+    height: 190px;
+    .item__img {
+      width: 90px;
+      height: 80%;
+    }
+    h2 {
+      font-size: 26px;
+    }
+  }
+  .nouncy {
+    h2 {
+      line-height: 190px;
+    }
+  }
+}

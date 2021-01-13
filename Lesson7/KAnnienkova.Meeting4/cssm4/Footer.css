@@ -1,0 +1,22 @@
+/* Error: This file is already being loaded.
+ *   ,--> scssm4/Mixines.scss
+ * 1 | @import "Mixines.scss";
+ *   |         ^^^^^^^^^^^^^^ new load
+ *   '
+ *   ,--> scssm4/Footer.scss
+ * 1 | @import "Mixines.scss";
+ *   |         ============== original load
+ *   '
+ *   scssm4/Mixines.scss 1:9  @import
+ *   scssm4/Footer.scss 1:9   root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: This file is already being loaded.\a   \250c \2500 \2500 > scssm4/Mixines.scss\a 1 \2502  @import "Mixines.scss";\a   \2502          ^^^^^^^^^^^^^^ new load\a   \2575 \a   \250c \2500 \2500 > scssm4/Footer.scss\a 1 \2502  @import "Mixines.scss";\a   \2502          \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  original load\a   \2575 \a   scssm4/Mixines.scss 1:9  @import\a   scssm4/Footer.scss 1:9   root stylesheet';
+}

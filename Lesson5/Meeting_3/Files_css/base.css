@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: "Courier New", monospace;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  text-align: center;
+}
+ul,
+li {
+  list-style: none;
+}
+body {
+  background-color: #373738;
+}

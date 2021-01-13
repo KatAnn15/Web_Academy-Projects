@@ -1,0 +1,29 @@
+@import "Mixins.scss";
+
+.shop-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  grid-gap: 15px;
+  width: 90%;
+  margin: auto;
+  .product-img {
+    width: 100%;
+  }
+}
+hr {
+  width: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .shop-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .shop-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}

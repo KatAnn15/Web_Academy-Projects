@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Использование ресурса posts</h2>
+    <p>
+      Данный запрос предоставляет список постов которые создал пользователь со
+      следующими полями
+      <br>  
+      <code>
+        { "author": "John Doe",
+        "createdAt": 1609074500795,
+        "text": 'hello world'
+        "avatarUrl": "public/images/2020-12-27T13:08:20.786Z-Screenshot
+        2020-12-26 at 14.11.00.png", // аватар url "id": 5 },
+      </code>
+      <h3><a target="_blank" href="http://localhost:4000/comments?_page=1&_limit=10">адрес для запроса локально </a> </h3>
+      <h3><a target="_blank" href="https://boring-fe.herokuapp.com/comments?_page=1&_limit=10">адрес для запроса удалееный сервер </a> </h3>
+    </p>
+    <br>
+    <form method="post" id="form">
+      <input type="text" id="author" name="author" placeholder="Author"/>
+      <textarea type="text" id="author" name="text" placeholder="text"></textarea>
+      <input
+        class="form-control-file"
+        type="file"
+        accept="image/*"
+        name="image"
+        id="fileInput"
+      />
+      <input class="btn mt-3" type="submit" value="upload" />
+    </form>
+    <img src="" id="preview_img" class="preview_img" />
+    <script>
+      fileInput.addEventListener('change', () => {
+        if (fileInput.value) {
+          const fileReader = new FileReader();
+
+          fileReader.addEventListener('load', function () {
+            // convert image to base64 encoded string
+            preview_img.setAttribute('src', this.result);
+            console.log(this.result);
+          });
+          fileReader.readAsDataURL(fileInput.files[0]);
+        }
+      });
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log(fileInput.files);
+        const formData = new FormData(form);
+        fetch('https://boring-fe.herokuapp.com/comments', {
+          method: 'POST',
+          body: formData,
+        })
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => console.log(data));
+      });
+    </script>
+  </body>
+</html>

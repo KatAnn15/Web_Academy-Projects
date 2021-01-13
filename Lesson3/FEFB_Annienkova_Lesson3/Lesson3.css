@@ -1,0 +1,55 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url(./Assests/Images/45d10e_8b6ac011530347fbbb1ed0d0d1d4fb24_mv2\ 1@3x.png);
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+* {
+  max-width: 2000px;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+}
+
+.menu {
+  margin: 5vw 0px;
+}
+.menu-list li {
+  display: inline-block;
+  color: #47fcc0;
+  width: 7vw;
+  height: 2.5vh;
+  font-size: 2.6vh;
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 20vh;
+  font-size: 9vh;
+  font-weight: 700;
+  text-align: center;
+  line-height: 5vh;
+}
+
+h2 {
+  margin-top: 7vh;
+  font-size: 2.5vh;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.notify-btn {
+  margin-top: 7vh;
+  background-color: #47fcc0;
+  color: white;
+  border: none;
+  padding: 1.5vh 3.8vw;
+  font-size: 2vh;
+}
+.body {
+  min-height: calc(100vh - 50vh);
+}

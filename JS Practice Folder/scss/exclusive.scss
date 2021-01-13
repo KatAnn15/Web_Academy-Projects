@@ -1,0 +1,82 @@
+@import "mixines.scss";
+
+.half-bg {
+  display: flex;
+  margin-top: 5px;
+  .strip__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    .strip__category {
+      font-size: 16px;
+      color: rgb(41, 37, 37);
+      padding-top: 10px;
+      @include bodyDescription;
+    }
+    .strip__title {
+      @include bodyTitle;
+      color: rgb(53, 52, 52);
+      font-size: 50px;
+      text-transform: uppercase;
+      width: 50%;
+    }
+    .strip__description {
+      @include bodyDescription;
+      width: 90%;
+      font-size: 18px;
+    }
+    .strip__action-btn {
+      @include bodyBtn;
+      color: black;
+      border: 2px solid black;
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.full-bg {
+  position: relative;
+  .strip__info {
+    @include stripContentBox;
+    justify-content: space-around;
+    .strip__category {
+      font-size: 16px;
+      color: #ffffff;
+      padding-top: 10px;
+      @include bodyDescription;
+      width: 60%;
+      text-align: left;
+      margin: 0;
+      padding-left: 60px;
+    }
+    .strip__title {
+      @include bodyTitle;
+      color: white;
+      font-size: 60px;
+      margin: 0;
+      text-align: left;
+      padding-left: 60px;
+    }
+    .strip__description {
+      @include bodyDescription;
+      width: 90%;
+      font-size: 18px;
+      color: white;
+      margin: 0;
+      text-align: left;
+      padding-left: 60px;
+    }
+    .strip__action-btn {
+      @include bodyBtn;
+      color: rgb(255, 255, 255);
+      border: 2px solid rgb(255, 255, 255);
+      width: 250px;
+      margin-left: 60px;
+    }
+    .discover {
+      text-transform: uppercase;
+    }
+  }
+}

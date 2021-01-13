@@ -1,0 +1,99 @@
+.red {
+  background-color: #a53535;
+}
+
+.blue {
+  background-color: #2828ad;
+}
+
+.yellow {
+  background-color: #bbbb27;
+}
+
+.black {
+  background-color: black;
+}
+
+.pink {
+  background-color: #ce425a;
+}
+
+.aqua {
+  background-color: #55e9e9;
+}
+
+.green {
+  background-color: #268a26;
+}
+
+.fuchsia {
+  background-color: fuchsia;
+}
+
+.orange {
+  background-color: #ffc14d;
+}
+
+@media screen and (max-width: 2050px) {
+  .blue {
+    grid-column: 2/span 3;
+  }
+
+  .black {
+    grid-column: 2/span 2;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .pink {
+    grid-column: 2/span 3;
+    grid-row-start: 2;
+    grid-row-end: 6;
+  }
+
+  .blue {
+    grid-column: auto;
+  }
+
+  .black {
+    grid-column: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .pink {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .green {
+    grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: 5;
+  }
+
+  .aqua {
+    grid-row-start: 3;
+    grid-row-end: 5;
+  }
+
+  .orange {
+    grid-column: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+  }
+
+  .fuchsia {
+    grid-column: 2/span 2;
+  }
+}
+@media screen and (max-width: 992px) {
+  .widget__item {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .orange {
+    grid-column: 1/span 2;
+  }
+}
+
+/*# sourceMappingURL=items-colors.css.map */

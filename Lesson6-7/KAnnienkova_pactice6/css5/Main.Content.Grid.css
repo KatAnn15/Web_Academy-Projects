@@ -1,0 +1,98 @@
+.grid-gallery {
+  margin: 48px auto 61px auto;
+}
+.grid-gallery__title {
+  size: 22px;
+  font-weight: 400;
+  display: flex;
+  line-height: 26px;
+}
+.grid-gallery__sub-title {
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  line-height: 26px;
+  text-align: left;
+  padding-top: 7px;
+}
+.grid-gallery__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  margin-top: 61px;
+}
+.grid-gallery__item {
+  height: 525px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.198);
+}
+.grid-gallery__item:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.555);
+  padding: 5px;
+  border-radius: 4px;
+}
+.grid-gallery__item .item__img {
+  height: 331px;
+  width: 100%;
+  object-fit: cover;
+}
+.grid-gallery__item .item__description {
+  display: block;
+  padding: 10px;
+  padding: 19px;
+  position: relative;
+  height: 190px;
+}
+.grid-gallery__item .item__title {
+  display: flex;
+  font-weight: 400;
+  font-size: 20px;
+}
+.grid-gallery__item .item__rating {
+  position: absolute;
+  right: 19px;
+  top: 15px;
+  font-size: 26px;
+}
+.grid-gallery__item .item__sub-title {
+  display: flex;
+  font-weight: 400;
+  padding-top: 17px;
+  font-size: 16px;
+}
+.grid-gallery__item .item__details {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  padding-top: 10px;
+}
+.grid-gallery__item .item__action-btn {
+  position: absolute;
+  bottom: 18px;
+  transform: translate(-50%);
+  padding: 10px 80px;
+  width: 85%;
+  font-size: 16px;
+  background-color: #18c6d1;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+.grid-gallery__item .item__action-btn:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.63);
+  background-color: #14d081;
+}
+
+@media screen and (max-width: 575px) {
+  .grid-gallery {
+    margin-top: 49px;
+    width: 93%;
+  }
+  .grid-gallery__content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/*# sourceMappingURL=Main.Content.Grid.css.map */

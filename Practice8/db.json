@@ -1,0 +1,77 @@
+{
+  "posts": [
+    {
+      "title": "End of Life for Azure Notebooks (github.com/microsoft)",
+      "content": "The Azure Notebooks preview is ending on October 9th, 2020 as we focus on building great Jupyter notebooks experiences across our products, including Visual Studio Code, Azure, GitHub, Codespaces. We deeply value the Azure Notebooks community and all that was created over the past 4 years. This has our team all the more excited to share our latest notebooks experiences with you. Please visit our site to find information on these experiences as well as instructions for downloading any content you currently have on the Azure Notebooks site.",
+      "avatarUrl": "https://image.freepik.com/free-vector/golden-modern-happy-new-year-background_1361-3213.jpg",
+      "author": "John Doe",
+      "id": 1
+    },
+    {
+      "title": "UserGems (YC S14) is hiring engineers",
+      "content": "UserGems is growing! We are looking for a Senior Software Engineer and a Software Engineer to join our team. If you know anyone that would be interested, please send them our way. More details about the roles: https://www.usergems.com/careers This is a Remote position. Our headquarter is based in San Francisco and our European office in Salzburg (Austria), but most of our team is remote.",
+      "avatarUrl": "https://image.freepik.com/free-vector/golden-modern-happy-new-year-background_1361-3213.jpg",
+      "author": "Max Doe",
+      "id": 2
+    },
+    {
+      "title": "Other comment",
+      "content": "The Azure Notebooks preview is ending on October 9th, 2020 as we focus on building great Jupyter notebooks experiences across our products, including Visual Studio Code, Azure, GitHub, Codespaces. We deeply value the Azure Notebooks community and all that was created over the past 4 years. This has our team all the more excited to share our latest notebooks experiences with you. Please visit our site to find information on these experiences as well as instructions for downloading any content you currently have on the Azure Notebooks site.",
+      "avatarUrl": "https://image.freepik.com/free-vector/merry-christmas-happy-new-year-promotion-poster_139523-494.jpg",
+      "createdAt": 1608974911674,
+      "id": 3
+    },
+    {
+      "title": "Other comment 1",
+      "content": "The Azure Notebooks preview is ending on October 9th, 2020 as we focus on building great Jupyter notebooks experiences across our products, including Visual Studio Code, Azure, GitHub, Codespaces. We deeply value the Azure Notebooks community and all that was created over the past 4 years. This has our team all the more excited to share our latest notebooks experiences with you. Please visit our site to find information on these experiences as well as instructions for downloading any content you currently have on the Azure Notebooks site.",
+      "avatarUrl": "https://image.freepik.com/free-vector/merry-christmas-happy-new-year-promotion-poster_139523-494.jpg",
+      "createdAt": 1608974915031,
+      "id": 4
+    },
+    {
+      "title": "Other comment 2",
+      "content": "The Azure Notebooks preview is ending on October 9th, 2020 as we focus on building great Jupyter notebooks experiences across our products, including Visual Studio Code, Azure, GitHub, Codespaces. We deeply value the Azure Notebooks community and all that was created over the past 4 years. This has our team all the more excited to share our latest notebooks experiences with you. Please visit our site to find information on these experiences as well as instructions for downloading any content you currently have on the Azure Notebooks site.",
+      "avatarUrl": "https://image.freepik.com/free-vector/golden-modern-happy-new-year-background_1361-3213.jpg",
+      "createdAt": 1608974943144,
+      "id": 5
+    },
+    {
+      "title": "Other comment 2",
+      "content": "The Azure Notebooks preview is ending on October 9th, 2020 as we focus on building great Jupyter notebooks experiences across our products, including Visual Studio Code, Azure, GitHub, Codespaces. We deeply value the Azure Notebooks community and all that was created over the past 4 years. This has our team all the more excited to share our latest notebooks experiences with you. Please visit our site to find information on these experiences as well as instructions for downloading any content you currently have on the Azure Notebooks site.",
+      "avatarUrl": "https://image.freepik.com/free-vector/golden-modern-happy-new-year-background_1361-3213.jpg",
+      "author": "John Doe",
+      "createdAt": 1608974972522,
+      "id": 6
+    },
+    {
+      "title": "TEST POST",
+      "content": "UserGems is growing! We are looking for a Senior Software Engineer and a Software Engineer to join our team. If you know anyone that would be interested, please send them our way. More details about the roles: https://www.usergems.com/careers This is a Remote position. Our headquarter is based in San Francisco and our European office in Salzburg (Austria), but most of our team is remote.",
+      "avatarUrl": "https://image.freepik.com/free-vector/golden-modern-happy-new-year-background_1361-3213.jpg",
+      "author": "Max Doe",
+      "createdAt": 1608977078005,
+      "id": 7
+    },
+    {
+      "title": "Testing this post method",
+      "content": "Is it working? If you see it, the it does :)",
+      "author": "New test from Kat",
+      "createdAt": 1608978337029,
+      "id": 9
+    }
+  ],
+  "strips": [
+    {
+      "title": "Welcome to the world of entertainment",
+      "description": "The Dubai Mall, also known as the home of the Dubai shopping festival, is one of the world's most beautiful cities. Lots of things to do in The Dubai Mall like shopping festivals, hotels, and other forms of entertainment. We use cookies to make sure you get the best experience on our website.",
+      "id": 1,
+      "bgImage": "https://wallpapercave.com/wp/wp1809473.jpg"
+    }
+  ],
+  "submissions": [
+    {
+      "email": "wwwYinker@mail.ru",
+      "message": "Is a non-negative <percentage> value, relative to the block size of the grid container. If the size of the grid container depends on the size of its tracks, then the percentage must be treated as auto.\nThe intrinsic size contributions of the track may be adjusted to the size of the grid container, and increase the final size of the track by the minimum amount that would result in honoring the percentage.",
+      "id": 3
+    }
+  ]
+}

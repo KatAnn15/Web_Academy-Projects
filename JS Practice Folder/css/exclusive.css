@@ -1,0 +1,106 @@
+.half-bg {
+  display: flex;
+  margin-top: 5px;
+}
+.half-bg .strip__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+.half-bg .strip__info .strip__category {
+  font-size: 16px;
+  color: #292525;
+  padding-top: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+}
+.half-bg .strip__info .strip__title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  width: 40%;
+  color: #353434;
+  font-size: 50px;
+  text-transform: uppercase;
+  width: 50%;
+}
+.half-bg .strip__info .strip__description {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  width: 90%;
+  font-size: 18px;
+}
+.half-bg .strip__info .strip__action-btn {
+  padding: 15px 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  color: black;
+  border: 2px solid black;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.full-bg {
+  position: relative;
+}
+.full-bg .strip__info {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.596), rgba(0, 0, 0, 0.719));
+  justify-content: space-around;
+}
+.full-bg .strip__info .strip__category {
+  font-size: 16px;
+  color: #ffffff;
+  padding-top: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  width: 60%;
+  text-align: left;
+  margin: 0;
+  padding-left: 60px;
+}
+.full-bg .strip__info .strip__title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  width: 40%;
+  color: white;
+  font-size: 60px;
+  margin: 0;
+  text-align: left;
+  padding-left: 60px;
+}
+.full-bg .strip__info .strip__description {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  width: 90%;
+  font-size: 18px;
+  color: white;
+  margin: 0;
+  text-align: left;
+  padding-left: 60px;
+}
+.full-bg .strip__info .strip__action-btn {
+  padding: 15px 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  color: white;
+  border: 2px solid white;
+  width: 250px;
+  margin-left: 60px;
+}
+.full-bg .strip__info .discover {
+  text-transform: uppercase;
+}
+
+/*# sourceMappingURL=exclusive.css.map */

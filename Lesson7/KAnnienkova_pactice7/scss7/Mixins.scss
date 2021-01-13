@@ -1,0 +1,11 @@
+@mixin global-width {
+  width: 95%;
+  margin: auto;
+}
+@mixin side-actions-media {
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  bottom: 50%;
+}

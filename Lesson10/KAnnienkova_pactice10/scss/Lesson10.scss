@@ -1,0 +1,65 @@
+.widget {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid rgba(0, 81, 255, 0.52);
+  border-radius: 45px;
+  box-sizing: border-box;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  &::after {
+    content: "Choose an item";
+    height: 50px;
+    padding-top: 25px;
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 900;
+    color: rgb(206, 9, 212);
+  }
+}
+.lightsItem {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid rgb(4, 8, 71);
+  margin-top: 10px;
+  background-color: white;
+  &:hover {
+    box-shadow: 0 0 15px black;
+  }
+}
+.item_upper.active {
+  background-color: red;
+  box-shadow: 0 0 20px red;
+}
+.item_middle.active {
+  background-color: yellow;
+  box-shadow: 0 0 20px yellow;
+}
+.item_bottom.active {
+  background-color: green;
+  box-shadow: 0 0 20px green;
+}
+.startIntervalBtn {
+  position: absolute;
+  padding: 20px;
+  background-color: rgb(155, 11, 11);
+  top: 20%;
+  left: 20%;
+  border-radius: 10px;
+  color: white;
+}
+.stopIntervalBtn {
+  position: absolute;
+  padding: 20px;
+  background-color: rgb(0, 47, 255);
+  top: 20%;
+  right: 20%;
+  border-radius: 10px;
+  color: white;
+}

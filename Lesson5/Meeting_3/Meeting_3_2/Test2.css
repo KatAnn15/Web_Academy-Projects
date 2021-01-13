@@ -1,0 +1,109 @@
+body {
+  color: var(--page-color);
+}
+.pricing-plans-container {
+  position: absolute;
+  display: block;
+  width: 1200px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.pricing-plan__title {
+  font-size: 36px;
+  font-weight: 700;
+}
+.pricing-plan__sub-title {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 34px 0 46px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider {
+  content: "";
+  display: flex;
+  width: 60px;
+  height: 32px;
+  background-color: #af1a44;
+  border-radius: 16px;
+  margin: 0 10px;
+  justify-content: flex-end;
+}
+.slider__round {
+  content: "";
+  width: 27px;
+  height: 27px;
+  margin: 2px 3px;
+  background-color: white;
+  border-radius: 16px;
+}
+.pricing-plans__plans-list {
+  display: flex;
+  justify-content: space-between;
+}
+.plans-list__item {
+  display: block;
+  width: 375px;
+  height: 608px;
+  background-color: #22262c;
+  border-radius: 10px;
+  padding: 37px 25px;
+  position: relative;
+}
+.plans-list__item:hover {
+  box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+.plans-list__item__title {
+  font-size: 25px;
+  font-weight: 600;
+}
+.plans-list__item__price {
+  margin-top: 18px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 76px;
+}
+.plans-list__item__billing-cycle {
+  font-size: 18px;
+  padding-left: 10px;
+}
+.plans-list__item__features {
+  margin-top: 40px;
+  padding-left: 30px;
+}
+.plans-list__item__features_pro {
+  padding-left: 0;
+}
+.plans-list__item__features li {
+  text-align: left;
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 100;
+}
+.plans-list__item__features li::before {
+  content: "\2022";
+  color: #bc1e4a;
+  padding: 10px;
+}
+.plans-list__item__action-btn {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px 50px;
+  border: 1px solid #bc1e4b56;
+  box-shadow: 0 0 10px #920273d0;
+  border-radius: 4px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+}
+.plans-list__item__action-btn:focus {
+  box-shadow: 0 0 15px white;
+}
+.plans-list__item__action-btn:hover {
+  background-color: #ad1b44;
+  box-shadow: 0 0 10px #22011c;
+}
