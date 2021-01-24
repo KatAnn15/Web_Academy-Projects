@@ -1,0 +1,119 @@
+.join-us-strip {
+  background-image: url(../../assets/images/home-imgs/main/shoes.webp);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 50%;
+  width: 100%;
+  height: 575px;
+  padding-top: 130px;
+  .join-us-strip__text-wrapper {
+    text-align: center;
+    .join-us-strip__title {
+      font-size: 65px;
+      font-weight: 400;
+      color: rgb(24, 41, 61);
+    }
+    .join-us-strip__subtitle {
+      font-size: 24px;
+      font-weight: 100;
+      color: rgb(24, 41, 61);
+      margin-top: 25px;
+    }
+    .join-us-strip__description {
+      width: 340px;
+      margin: 0 auto;
+      color: rgb(24, 41, 61);
+    }
+  }
+  .join-us-strip__contact-us-form {
+    width: 340px;
+    margin: 30px auto;
+    display: flex;
+    height: 40px;
+    .label-inactive {
+      display: none;
+    }
+    .label-active {
+      display: block;
+      color: rgba(10, 7, 7, 0.829);
+      font-size: 10px;
+      font-weight: 100;
+      position: absolute;
+      z-index: 1;
+      outline: none;
+      padding: 1px 3px;
+      background-color: white;
+    }
+    .prefix-error-inactive {
+      display: none;
+    }
+    .prefix-error-active {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      transform: translate(0, 40px);
+      font-size: 13px;
+      color: red;
+      font-weight: 100;
+    }
+    .prefix-label {
+      transform: translate(10px, -7px);
+    }
+    .number-label {
+      transform: translate(130%, -7px);
+    }
+    input {
+      border: none;
+      font-family: "Futura LT Light";
+      font-size: 16px;
+      position: relative;
+      &:focus {
+        outline: 2px solid rgb(20, 134, 200);
+      }
+    }
+    .join-us-form_country-code {
+      width: 60px;
+      padding-left: 10px;
+      height: 40px;
+      position: relative;
+    }
+    .join-us-form_phone-body {
+      width: 146px;
+      padding-left: 10px;
+      margin: 0 8px;
+      position: relative;
+    }
+    button {
+      color: white;
+      background-color: rgb(37, 60, 87);
+      border: none;
+      width: 120px;
+      height: 40px;
+      font-family: "Futura LT Light";
+      font-size: 16px;
+      cursor: pointer;
+      outline: none;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+  .join-us-strip__action-bar {
+    margin-top: 30px;
+    button {
+      width: 135px;
+      height: 40px;
+      background-color: black;
+      border: none;
+      border-radius: 5px;
+      overflow: hidden;
+      margin: 5px;
+      outline: none;
+      cursor: pointer;
+      img {
+        height: 80%;
+        width: 85%;
+      }
+    }
+  }
+}

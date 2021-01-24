@@ -1,0 +1,11 @@
+{
+    "git.autorefresh": false,
+    "git.autoRepositoryDetection": true,
+    "[git-commit]": {
+
+        "editor.rulers": [
+            72
+        ],
+        "workbench.editor.restoreViewState": false
+    }
+}

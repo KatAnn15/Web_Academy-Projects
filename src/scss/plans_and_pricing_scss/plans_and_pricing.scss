@@ -1,0 +1,122 @@
+@import "./details.scss";
+@import "./sign-up.scss";
+@import "./order-summary.scss";
+
+.pricing-plans__page-info {
+  font-size: 18px;
+  font-family: "Futura LT Light";
+  width: 490px;
+  margin: 60px auto;
+}
+
+.pricing-plans-widget {
+  height: 750px;
+  width: 100%;
+  margin-top: 50px;
+  &__content {
+    width: 970px;
+    grid-gap: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    font-weight: 100;
+    font-family: "Futura LT Light";
+    .pricing-plan {
+      text-align: center;
+      height: 708px;
+      position: relative;
+      border: 1px solid rgb(43, 43, 61);
+      &:nth-child(even) {
+        background-color: rgba(190, 225, 230, 1);
+      }
+      &__label {
+        background-color: rgb(238, 255, 66);
+        position: absolute;
+        width: 68px;
+        height: 30px;
+        font-size: 14px;
+        font-family: "Futura LT Light";
+        font-weight: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 50%;
+        transform: translate(-50%, -15px);
+      }
+      &__no-label {
+        display: none;
+      }
+      &__info {
+        padding: 30px;
+        height: 385px;
+        display: grid;
+        grid-template-rows: 1fr 2fr 1.3fr 2fr 1.7fr 2fr;
+        .pricing-plan {
+          &__title {
+            font-size: 20px;
+            font-weight: 700;
+          }
+          &__price {
+            font-size: 101px;
+            padding-left: 5px;
+            padding-top: 10px;
+            span {
+              font-size: 18px;
+              position: absolute;
+              transform: translate(-90%, 5px);
+            }
+          }
+          &__cycle {
+            font-size: 12px;
+            font-weight: 700;
+          }
+          &__level {
+            font-weight: 100;
+            font-family: "Futura LT Light";
+          }
+          &__length {
+            font-weight: 100;
+            font-family: "Futura LT Light";
+          }
+          &__book-btn {
+            height: 47px;
+            border: none;
+            outline: none;
+            background-color: rgb(161, 199, 204);
+            font-family: "Futura LT Light";
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            &:hover {
+              background-color: rgba(161, 199, 204, 0.685);
+              color: rgb(37, 60, 87, 0.7);
+            }
+          }
+        }
+      }
+
+      &__benefits {
+        border-top: 1px solid rgb(37, 60, 87);
+        height: 263px;
+        width: 100%;
+        padding: 30px;
+        .benefit-item {
+          font-weight: 100;
+          font-family: "Futura LT Light";
+          font-size: 18px;
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 9920px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 575px) {
+}
