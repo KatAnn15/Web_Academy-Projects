@@ -9,6 +9,7 @@ import FoxFit from "./components/fox_fit/fox_fit";
 import PlansAndPricing from "./components/plans_and_pricing/plans_and_pricing";
 import Login from "./components/login/login";
 import Banner from "./components/global/banner";
+//export const CurrentPage = React.createContext("/");
 
 function App() {
   return (

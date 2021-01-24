@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import facebook_Icon from "../../assets/images/global-imgs/sign-up/facebook-icon.png";
 import google_Icon from "../../assets/images/global-imgs/sign-up/google-logo.jpg";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import GoogleLogin from "react-google-login";
-import { CurrentPage } from "../global/navbar";
+//import { CurrentPage } from "../../App";
 
 export default class Login extends React.Component {
   constructor() {
@@ -14,7 +14,7 @@ export default class Login extends React.Component {
       isMember: false,
     };
   }
-  static contextType = CurrentPage;
+  //static contextType = CurrentPage;
   openLogIn = () => {
     this.state.login
       ? this.setState({ login: false })
@@ -105,7 +105,7 @@ export default class Login extends React.Component {
     console.log("Login window has been closed!");
   };
   returnPage = () => {
-    console.log(this.context);
+    console.log("What");
   };
   openFacebookPrompt = () => {
     <FacebookLogin
@@ -191,7 +191,7 @@ export default class Login extends React.Component {
               {this.state.login ? "Log In" : "Sign Up"} with Email
             </button>
           </div>
-          <Link to={this.context} onClick={this.returnPage}>
+          <Link to="/" onClick={this.returnPage}>
             <button className="lightbox__close-btn">&times; </button>
           </Link>
         </div>

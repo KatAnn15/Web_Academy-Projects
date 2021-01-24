@@ -2,7 +2,7 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import login from "../../assets/images/global-imgs/login.png";
 import Login from "../login/login";
-export const CurrentPage = React.createContext("/");
+//import CurrentPage from "../../App";
 
 export default class Navbar extends React.Component {
   render() {
@@ -32,9 +32,9 @@ export default class Navbar extends React.Component {
             to="/login"
             onClick={() => {
               console.log(window.location.pathname);
-              <CurrentPage.Provider value={window.location.pathname}>
-                <Login />
-              </CurrentPage.Provider>;
+              // <CurrentPage.Provider value={window.location.pathname}>
+              //   <Login />
+              // </CurrentPage.Provider>;
             }}
           >
             <img
