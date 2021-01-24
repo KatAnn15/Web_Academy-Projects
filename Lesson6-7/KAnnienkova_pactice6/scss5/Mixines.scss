@@ -1,0 +1,54 @@
+@mixin header-text {
+  display: flex;
+  font-size: 14px;
+  color: #767676;
+  line-height: 18px;
+  font-weight: 400;
+}
+@mixin social-icon {
+  color: #767676;
+  padding-left: 20px;
+  font-size: 18px;
+}
+@mixin menu-icon {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: #8d1111;
+  position: absolute;
+  left: 0;
+  transition: all 0.1s;
+}
+@mixin description {
+  font-weight: 400;
+  display: flex;
+  line-height: 26px;
+}
+@mixin header-text-grid {
+  display: flex;
+  font-weight: 400;
+}
+@mixin more-icon-main {
+  position: relative;
+  margin-left: 20px;
+  height: 7px;
+  display: flex;
+  align-self: center;
+}
+@mixin more-icon-before {
+  content: "";
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  width: 8px;
+  transform: rotate(45deg);
+}
+@mixin more-icon-after {
+  content: "";
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  width: 8px;
+  bottom: 0;
+  transform: rotate(-45deg);
+}

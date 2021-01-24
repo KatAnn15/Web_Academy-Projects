@@ -1,0 +1,139 @@
+.strip1 {
+  min-height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 100px;
+}
+.strip1 .strip-title {
+  font-size: 65px;
+  color: white;
+  text-shadow: 0 0 3px white;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+.strip1 .strip-description {
+  color: white;
+  font-size: 20px;
+  width: 350px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.397);
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+.strip1 .contact-us-btn {
+  padding: 10px 20px;
+  background-color: rgba(175, 35, 156, 0.445);
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  left: 200px;
+  top: 250px;
+  border: 2px solid white;
+  box-shadow: 0 0 15px white;
+  cursor: pointer;
+}
+.strip1 .contact-us-btn:hover {
+  padding: 13px 23px;
+  transform: translate(-3px, -3px);
+}
+
+.form-wrapper {
+  background-color: rgba(15, 18, 51, 0.609);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: none;
+}
+.form-wrapper .contact-form {
+  width: 500px;
+}
+.form-wrapper .contact-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+.form-wrapper .contact-form textarea {
+  max-width: 500px;
+  height: 100px;
+  border-radius: 10px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.form-wrapper .contact-form .submit-btn {
+  padding: 10px 50px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  font-weight: 800;
+  font-size: large;
+  cursor: pointer;
+}
+.form-wrapper .contact-form .submit-btn:hover {
+  border: 5px solid black;
+  box-shadow: 0 0 10px white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.submissions-list {
+  width: 900px;
+  background-color: white;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 280px 280px 280px;
+  grid-gap: 40px;
+}
+.submissions-list .submission {
+  border-radius: 20px;
+  border: 5px solid #364e80;
+  position: relative;
+  padding: 20px 20px 20px 20px;
+  background-color: #052a44;
+}
+.submissions-list .submission .member-img {
+  width: 150px;
+}
+.submissions-list .submission .delete-post {
+  width: 40px;
+  height: 40px;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-image: url("../assets/images/delete.png");
+  background-size: cover;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.submissions-list .submission .delete-post:hover {
+  border-radius: 50%;
+  box-shadow: 0 0 10px red;
+}
+.submissions-list .submission .subscriber {
+  color: #000e18;
+  background-color: white;
+  padding: 5px 5px;
+  margin: 0;
+  margin-top: 20px;
+}
+.submissions-list .submission .submission-content {
+  background-color: white;
+  padding: 5px 5px;
+  margin-top: 5px;
+  min-height: 100px;
+  border-radius: 0 0 10px 10px;
+}
+
+/*# sourceMappingURL=main.css.map */

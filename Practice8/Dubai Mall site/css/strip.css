@@ -1,0 +1,44 @@
+.strip1 {
+  min-height: 80vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0 100px;
+}
+.strip1 .strip-title {
+  font-size: 65px;
+  color: white;
+  text-shadow: 0 0 3px white;
+  text-align: center;
+  margin: 40px 0 0 0;
+}
+.strip1 .strip-description {
+  color: white;
+  font-size: 20px;
+  width: 350px;
+  text-align: right;
+  background-color: rgba(0, 0, 0, 0.397);
+  padding: 20px 50px;
+  border-radius: 10px;
+}
+.strip1 .contact-us-btn {
+  padding: 10px 20px;
+  background-color: rgba(175, 35, 156, 0.445);
+  border-radius: 10px;
+  color: white;
+  position: absolute;
+  left: 200px;
+  top: 250px;
+  border: 2px solid white;
+  box-shadow: 0 0 15px white;
+  cursor: pointer;
+}
+.strip1 .contact-us-btn:hover {
+  padding: 13px 23px;
+  transform: translate(-3px, -3px);
+}
+
+/*# sourceMappingURL=strip.css.map */

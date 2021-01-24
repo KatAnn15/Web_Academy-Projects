@@ -1,0 +1,51 @@
+.content-wrapper {
+  width: 1200px;
+  margin: 0 auto;
+  height: 100vh;
+}
+.comments-list {
+  width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  background-color: rgba(128, 128, 128, 0.082);
+  padding: 0 150px;
+  .post-container {
+    box-sizing: border-box;
+    border: 10px solid #81d8eb;
+    border-radius: 20px;
+    background-color: white;
+    .post__author-details {
+      display: flex;
+      width: 170px;
+      background-color: transparent;
+      position: absolute;
+      font-size: 14px;
+      color: rgb(197, 74, 95);
+      span {
+        font-size: 13px;
+      }
+      .author-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+    .post-img {
+      width: 100%;
+    }
+    .post-title {
+      line-height: 30px;
+      margin: 20px auto;
+      text-align: center;
+      width: 90%;
+    }
+    .post-content {
+      width: 90%;
+      font-weight: 100;
+      text-align: justify;
+      padding-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+.modalWidget {
+  visibility: hidden;
+}
+.active {
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.876);
+  visibility: visible;
+}
+
+.contactForm {
+  min-width: 550px;
+  min-height: 500px;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    width: 96%;
+    height: 150px;
+    background-image: url(../assets/images/background-top.png);
+    background-size: contain;
+    content: "";
+    position: absolute;
+    top: 10px;
+    border-radius: 20px;
+  }
+  &::after {
+    width: 96%;
+    height: 100px;
+    background-color: red;
+    content: "Subscribe to the Christmas mail !";
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.form__input {
+  width: 400px;
+  height: 35px;
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid rgb(199, 197, 197);
+  padding-left: 10px;
+}
+.divider {
+  width: 400px;
+  margin: 25px 0;
+  border-color: #79194965;
+}
+.submitBtn {
+  padding: 10px 40px;
+  font-size: 14px;
+  font-weight: 900;
+  color: white;
+  position: absolute;
+  right: 75px;
+  bottom: 165px;
+  border-radius: 15px;
+  background-color: black;
+}
+.closeWidget {
+  height: 50px;
+  width: 50px;
+  position: relative;
+  &::before {
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-image: url("../assets/images/close-btn-addOn.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform: translate(-50%, -20%);
+  }
+}
+.closeBtnContent {
+  position: absolute;
+  top: 21px;
+  left: 11px;
+  &::before {
+    content: "";
+    height: 5px;
+    width: 25px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(45deg);
+    border-radius: 5px;
+  }
+  &::after {
+    content: "";
+    height: 5px;
+    width: 25px;
+    background-color: black;
+    position: absolute;
+    transform: rotate(-45deg);
+    border-radius: 5px;
+  }
+}

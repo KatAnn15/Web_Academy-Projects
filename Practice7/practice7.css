@@ -1,0 +1,15 @@
+.description {
+  height: 0;
+  overflow: hidden;
+}
+
+.expand {
+  height: auto;
+  background-color: transparent;
+  text-align: left;
+  margin: 0 auto;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid #4583a6;
+}

@@ -1,0 +1,35 @@
+.app__navbar {
+  height: 61px;
+  max-width: 1378px;
+  .navbar__list {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .navbar__link {
+      padding: 10px 25px;
+      font-size: 16px;
+      color: rgb(37, 60, 87);
+      &:hover {
+        color: #89aeb3;
+      }
+    }
+    .link_login {
+      display: flex;
+      align-items: center;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      cursor: pointer;
+      &:hover {
+        color: rgb(37, 60, 87);
+      }
+      .login-icon {
+        border-radius: 50%;
+        border: 1px solid black;
+        margin-right: 15px;
+      }
+    }
+  }
+}

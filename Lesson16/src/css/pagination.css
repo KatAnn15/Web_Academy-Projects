@@ -1,0 +1,14 @@
+.pagination {
+  display: flex;
+  width: 150px;
+  justify-content: space-around;
+  margin: 50px auto;
+}
+.pagination button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  color: white;
+}
+
+/*# sourceMappingURL=pagination.css.map */

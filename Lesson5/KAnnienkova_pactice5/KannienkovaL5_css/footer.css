@@ -1,0 +1,36 @@
+.global-footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 113px;
+  background-color: #e83556;
+  position: absolute;
+  bottom: 0;
+}
+.footer__actions {
+  display: flex;
+  padding: 51px 0 41px 0px;
+  width: 946px;
+  justify-content: space-between;
+}
+.footer__action {
+  display: flex;
+  cursor: pointer;
+}
+.action__vector-img:hover {
+  border-radius: 50%;
+  box-shadow: 0px 5px 15px rgba(251, 255, 241, 0.979);
+}
+.action__description {
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16.34px;
+  color: white;
+  display: flexbox;
+  text-transform: capitalize;
+}
+.footer__action_follow {
+  display: flex;
+  width: 130px;
+}

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css5/Practice5.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>AirBnB</title>
+</head>
+<body>
+    <div class="above-the-fold-container">
+        <header class="global-header">
+            <div class="global-header__wrapper global-content">     
+                <div class="navbar" id="navbar">
+                    <button  class="navbar__menu-icon" id="btn"></button>
+                    <ul class="navbar__list">
+                    <li class="navbar__item"><a href="#"> Shop</a></li>
+                    <li class="navbar__item"><a href="#"> Home</a></li>
+                    <li class="navbar__item"><a href="#"> About</a></li>
+                    <li class="navbar__item"><a href="#"> Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        </header>
+        <main class="global-main"> 
+            <div class="global-content">
+                <div class="form-widget">
+                    <h2 class="form-widget__title">Бронируйте <br>уникальное жилье</h2>
+                    <form action="" class="search-form">
+                        <div class="search-form__input-field">
+                            <label for="place">где</label>
+                            <input type="text" name="place" class="search-form__input search-form__input_place">
+                        </div>
+                        <div class="search-form__input-field">   
+                            <label for="arrival">прибытие</label>    
+                            <input type="date" name="arrival" class="search-form__input search-form__input_arrival">
+                        </div>
+                        <div class="search-form__input-field"> 
+                            <label for="departure">выезд</label>
+                            <input type="date" name="departure" class="search-form__input search-form__input_departure">
+                        </div>
+                        <div class="search-form__input-field">
+                            <label for="adults">взрослые</label>  
+                            <input type="number"name="adults"  class="search-form__input search-form__input_adults">
+                       </div>
+                        <div class="search-form__input-field"> 
+                            <label for="kids">дети</label>
+                           <input type="number"name="kids"  class="search-form__input search-form__input_kids">
+                        </div>
+                        <button class="search-btn">Начать Поиск</button>
+                </form>
+            </div>
+        </div>
+        </div>
+            <div class="slider global-content">
+                <h2 class="slider__title">Жилье Airbnb Plus</h2>
+                <span class="slider__sub-title">Подборка жилья, проверенного на качество и дизайн.</span>
+                <div class="slider__content">
+                    <img src="./Assets/Images/slider-vector.png" alt="" class="slider__vector">
+                    <button class="slider__btn">Найти жилье<span class="more-icon"></span></button>
+                </div>
+            </div>
+            <div class="grid-gallery global-content">
+                <h2 class="grid-gallery__title">Представляем Приключения Airbnb</h2>
+                <span class="grid-gallery__sub-title">Многодневные поездки под руководством местных экспертов. <br> Развлечения, питание и проживание включены.</span>
+                <div class="grid-gallery__content">
+                    <div class="grid-gallery__item">
+                        <img src="./Assets/Images/sydney-img" alt="" class="item__img">
+                        <div class="item__description">
+                            <h4 class="item__title">Sydney</h4>
+                            <h4 class="item__rating">4.5</h4>
+                            <h5 class="item__sub-title">Beautifutl jungles in Sydney</h5>
+                            <h5 class="item__details">From $820 per person</h5>
+                            <button class="item__action-btn">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="grid-gallery__item">
+                        <img src="./Assets/Images/Indonesia-img.jpg" alt="" class="item__img">
+                        <div class="item__description">
+                            <h4 class="item__title">Indonesia</h4>
+                            <h4 class="item__rating">4.5</h4>
+                            <h5 class="item__sub-title">Beautifutl jungles in Bali</h5>
+                            <h5 class="item__details">From $820 per person</h5>
+                            <button class="item__action-btn">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="grid-gallery__item">
+                        <img src="./Assets/Images/Philippines-img.jpg" alt="" class="item__img">
+                        <div class="item__description">
+                            <h4 class="item__title">Philippines</h4>
+                            <h4 class="item__rating">4.5</h4>
+                            <h5 class="item__sub-title">Beautifutl jungles in Philippines</h5>
+                            <h5 class="item__details">From $820 per person</h5>
+                            <button class="item__action-btn">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="grid-gallery__item">
+                        <img src="./Assets/Images/Vietnam-img.jpg" alt="" class="item__img">
+                        <div class="item__description">
+                            <h4 class="item__title">Vietnam</h4>
+                            <h4 class="item__rating">4.5</h4>
+                            <h5 class="item__sub-title">Beautifutl jungles in Vietnam</h5>
+                            <h5 class="item__details">From $820 per person</h5>
+                            <button class="item__action-btn">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="grid-gallery__item">
+                        <img src="./Assets/Images/Petra-img.jpg" alt="" class="item__img">
+                        <div class="item__description">
+                            <h4 class="item__title">Petra</h4>
+                            <h4 class="item__rating">4.5</h4>
+                            <h5 class="item__sub-title">Beautifutl jungles in Petra</h5>
+                            <h5 class="item__details">From $820 per person</h5>
+                            <button class="item__action-btn">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="grid-gallery__item">
+                        <img src="./Assets/Images/India-img.jpg" alt="" class="item__img">
+                        <div class="item__description">
+                            <h4 class="item__title">India</h4>
+                            <h4 class="item__rating">4.5</h4>
+                            <h5 class="item__sub-title">Beautifutl jungles in India</h5>
+                            <h5 class="item__details">From $820 per person</h5>
+                            <button class="item__action-btn">Book Now</button>
+                        </div>
+                    </div>
+                    <div class="grid-gallery__item">
+                        <img src="./Assets/Images/Dubai-img.jpg" alt="" class="item__img">
+                        <div class="item__description">
+                            <h4 class="item__title">Dubai</h4>
+                            <h4 class="item__rating">4.5</h4>
+                            <h5 class="item__sub-title">Beautifutl jungles in Dubai</h5>
+                            <h5 class="item__details">From $820 per person</h5>
+                            <button class="item__action-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="related-items-widget global-content">
+                <a href="#"  class="related-items-widget__title">Жилье по всему миру <span class="more-icon"></span></a>
+                <div class="related-items-wrapper">
+                    <a class="related-item" href="#">
+                        <li><img src="./Assets/Images/Austria-img.png" alt="" class="related-item__img"></li>
+                        <div class="related-item__description">
+                            <span class="related-item__title"><span class="related-item__label">СУПЕР-ХОЗЯИН</span>Австрия</span> 
+                            <span class="related-item__rating">&#9733; 4.90</span>
+                            <span class="related-item__info">Sunny apartment near metro station.</span>
+                        </div>
+                    </a>
+                    <a class="related-item" href="#">
+                        <li><img src="./Assets/Images/USA-img.png" alt="" class="related-item__img"></li>
+                        <div class="related-item__description">
+                            <span class="related-item__title"><span class="related-item__label">СУПЕР-ХОЗЯИН</span>США</span>
+                            <span class="related-item__rating">&#9733; 4.82</span>
+                            <span class="related-item__info">Grand and Cozy 1920's SF Studio</span>
+                        </div>
+                    </a>
+                    <a class="related-item" href="#">
+                        <li><img src="./Assets/Images/Thailand-img.png" alt="" class="related-item__img"></li>
+                        <div class="related-item__description">
+                            <span class="related-item__title">Thailand</span>
+                            <span class="related-item__info">White Breeze Pool 1BD Apartment</span>
+                        </div>
+                    </a>
+                    <a class="related-item" href="#">
+                        <li><img src="./Assets/Images/GB-img.png" alt="" class="related-item__img"></li>
+                        <div class="related-item__description">
+                            <span class="related-item__title"><span class="related-item__label">СУПЕР-ХОЗЯИН</span>Великобритания</span>
+                            <span class="related-item__info">White Breeze Pool 1BD Apartment</span>
+                        </div>
+                </a>
+            </div>
+        </div>
+        </main>
+
+        <footer class="global-footer global-content">
+            <div class="footer-mapping">
+                <div class="footer-section">
+                    <h2 class="footer-section__title">Airbnb</h2>
+                    <ul class="footer-section__links">
+                        <li class="footer-section__item"><a href="#">Карьера</a></li>
+                        <li class="footer-section__item"><a href="#">Новости</a></li>
+                        <li class="footer-section__item"><a href="#">Правила</a></li>
+                        <li class="footer-section__item"><a href="#">Принадлежность, этнокультурные и другие различия</a></li>
+                        <li class="footer-section__item"><a href="#">Доступность</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 class="footer-section__title">Подробнее о нас</h2>
+                    <ul class="footer-section__links">
+                        <li class="footer-section__item"><a href="#">Доверие и безопасность</a></li>
+                        <li class="footer-section__item"><a href="#">Бонус на путешествие</a></li>
+                        <li class="footer-section__item"><a href="#">Airbnb Citizen</a></li>
+                        <li class="footer-section__item"><a href="#">Деловые поездки</a></li>
+                        <li class="footer-section__item"><a href="#">Чем заняться</a></li>
+                        <li class="footer-section__item"><a href="#">Airbnbmag</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 class="footer-section__title">Прием гостей</h2>
+                    <ul class="footer-section__links">
+                        <li class="footer-section__item"><a href="#">Почему стоит принимать гостей</a></li>
+                        <li class="footer-section__item"><a href="#">Гостеприимство</a></li>
+                        <li class="footer-section__item"><a href="#">Как стать ответственным хозяином</a></li>
+                        <li class="footer-section__item"><a href="#">Организация Впечатлений</a></li>
+                        <li class="footer-section__item"><a href="#">Open Homes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h2 class="footer-section__title">Поддержка</h2>
+                    <ul class="footer-section__links">
+                        <li class="footer-section__item"><a href="#">Поддержка</a></li>
+                        <li class="footer-section__item"><a href="#">Поддержка соседей</a><span class="custom-label">Новинка</span></li>
+                    </ul>
+                </div>
+            </div> 
+                <hr>
+                <div class="footer-bottom-container">
+                <div class="footer-section legal-info">
+                    <img src="./Assets/Images/Site-logo.png" alt="" class="brand-logo">
+                    <li><a href="#" class="brand-copyright">© 2020 Airbnb, Inc. All rights reserved.</a></li>
+                    <li><a href="#" class="site-conditions">Уcловия</a></li>
+                    <li><a href="#" class="site-confidentiality">Конфиденциальность</a></li>
+                    <li><a href="#" class="site-map">Карта сайта</a></li>
+                </div>
+                <div class="footer-section social-bar">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-vk"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-instagram"></a></li>
+                </div>
+            </div>
+        </footer>
+        <script>
+            const btn = document.querySelector('#btn');
+            const navbar = document.querySelector('#navbar');
+            btn.addEventListener('click', () => {
+                navbar.classList.toggle('navbar_active')
+            });
+        </script>
+    </div>
+</body>
+</html>

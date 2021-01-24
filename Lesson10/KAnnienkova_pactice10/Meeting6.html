@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+     function getFullMonth(months, number) {
+       let word;
+        for (i = 0; i < months.length; i++) {
+            word = 'No such month!'
+                if (number === i) {
+                 word = months[i];
+                 break;
+            }
+        }
+        return word; 
+    }        
+        const monthsNames = getFullMonth(['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November'], 5) ;
+         console.log(monthsNames);
+
+               /**
+       * @param {string} count колличество повторений
+       * @param {string} value строка для повторения
+       * @returns {string} строка с названием месяца
+       * Пример: number=4 >> "Май"
+       * Подсказка нужно использовать массив с перечислением месяцев
+       * 
+       * Я не поняла при чем тут месяцы, честно говоря, поэтому сорри, будет так **/
+     
+      function repeatStr(count, value) {
+       const result = value.repeat([count])
+        return result;
+      }   
+    console.log(repeatStr(5, 'Hello')); 
+
+    let counter = 1;
+    const countSeconds = () => {
+        console.log("You are watching us for: " + counter + " seconds already!");
+        counter++;
+    }
+    setInterval(countSeconds, 1000); 
+    function squareSum(numbers){
+  return numbers.reduce((sum,num) => sum + (num * num), 0);
+}
+    console.log(squareSum([-9,-17,5,-9,-1,-20,8,3,-4]));
+    </script>
+</body>
+</html>

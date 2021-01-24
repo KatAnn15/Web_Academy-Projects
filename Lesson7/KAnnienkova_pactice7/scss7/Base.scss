@@ -1,0 +1,27 @@
+@import "Mixins.scss";
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+li,
+p {
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}

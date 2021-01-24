@@ -1,0 +1,128 @@
+{
+  "socialMedia": [
+    {
+      "alt": "facebook",
+      "iconUrl": "../../assets/images/home-imgs/social-bar/facebook_icon.webp",
+      "link": "https://www.facebook.com/wix"
+    },
+    {
+      "alt": "twitter",
+      "iconUrl": "../../assets/images/home-imgs/social-bar/twitter_icon.webp",
+      "link": "https://www.twitter.com/wix"
+    },
+    {
+      "alt": "youtube",
+      "iconUrl": "../../assets/images/home-imgs/social-bar/youtube_icon.webp",
+      "link": "https://www.youtube.com/wix"
+    },
+    {
+      "alt": "instagram",
+      "iconUrl": "../../assets/images/home-imgs/social-bar/ig_icon.webp",
+      "link": "https://www.instagram.com/wix"
+    }
+  ],
+  "homeStrips": [
+    {
+      "stripName": "meet-emilia",
+      "title": "Hi, I'm Emily",
+      "subtitle": "Certified Fitness Trainer and Personal Coach",
+      "description": "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.",
+      "linkPage": "/meet-emily",
+      "button": "Read More"
+    },
+    {
+      "stripName": "foxFit",
+      "title": "Introducing FoxFit",
+      "subtitle": "The Ultimate Method to Change Your Life",
+      "description": "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.",
+      "linkPage": "/foxfit",
+      "button": "Read More"
+    }
+  ],
+  "strips": [
+    {
+      "stripName": "main-meet-emily",
+      "title": "Certified Fitness Trainer and Personal Coach",
+      "description": "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.",
+      "linkPage": "/",
+      "button": "Book a Class"
+    },
+    {
+      "stripName": "vision",
+      "title": "My Vision",
+      "description": "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you."
+    },
+    {
+      "stripName": "main-fox-fit",
+      "title": "The Ultimate Method to Change Your Life",
+      "description": "I'm 'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.",
+      "description2": "This is a great space to write a long text about your company and your services. You can use this space to go into a little more detail about your company."
+    }
+  ],
+  "foxFitPerks": [
+    {
+      "name": "Suitable for Beginners"
+    },
+    {
+      "name": "Flexible Schedule"
+    },
+    {
+      "name": "Personal Guidance"
+    },
+    {
+      "name": "Advanced Techniques"
+    },
+    {
+      "name": "Proven Results"
+    },
+    {
+      "name": "Professional Trainers"
+    }
+  ],
+  "pricingPlans": [
+    {
+      "id": "fcnerjfcerkjfcoer",
+      "title": "Silver Membership",
+      "label": "no-label",
+      "price": 30,
+      "cycle": " ",
+      "level": "Short-term trial for beginners",
+      "length": "Valid for one month",
+      "duration": "1 month",
+      "benefits": ["I’m a benefit", "I’m a benefit", "I’m a benefit"]
+    },
+    {
+      "id": "hjoirfchcerhfcje",
+      "title": "Gold Membership",
+      "label": "label",
+      "price": 25,
+      "cycle": "Every month",
+      "level": "Ideal for advanced trainees",
+      "length": "Valid for 12 months",
+      "duration": "1 year",
+      "benefits": [
+        "I’m a benefit",
+        "I’m a benefit",
+        "I’m a benefit",
+        "I’m a benefit"
+      ]
+    },
+    {
+      "id": "pokrofjkjerbvbew",
+      "title": "Platinum Membership",
+      "label": "no-label",
+      "price": 40,
+      "cycle": "Every month",
+      "level": "Perfect for committed trainees",
+      "length": " ",
+      "duration": "Until cancelled",
+      "benefits": [
+        "I’m a benefit",
+        "I’m a benefit",
+        "I’m a benefit",
+        "I’m a benefit",
+        "I’m a benefit"
+      ]
+    }
+  ]
+}

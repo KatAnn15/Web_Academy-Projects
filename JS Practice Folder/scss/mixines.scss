@@ -1,0 +1,43 @@
+@mixin headerDesign {
+  font-size: 15.4px;
+  font-weight: 100;
+  text-transform: uppercase;
+  height: 100%;
+  align-items: center;
+}
+
+@mixin stripContentBox {
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 30px;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-image: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.596),
+    rgba(0, 0, 0, 0.719)
+  );
+}
+
+@mixin bodyTitle {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+  width: 40%;
+}
+
+@mixin bodyDescription {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 100;
+}
+
+@mixin bodyBtn {
+  padding: 15px 30px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+}

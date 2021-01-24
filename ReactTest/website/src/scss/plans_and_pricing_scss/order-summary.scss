@@ -1,0 +1,53 @@
+@mixin pageCheckout {
+  font-family: "Avenir Next";
+  font-weight: 100;
+  color: rgb(17, 16, 16);
+}
+.order-summary-widget {
+  width: 390px;
+  height: 260px;
+  text-align: left;
+  padding: 28px;
+  background-color: rgba(212, 211, 211, 0.212);
+  margin-left: 40px;
+  margin-top: 40px;
+  .order-summary {
+    &__product-info {
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(197, 197, 197, 0.514);
+    }
+    &__title {
+      @include pageCheckout;
+      font-size: 24px;
+    }
+    &__product__details__wrapper {
+      padding-top: 20px;
+      .order-summary {
+        &__product__details {
+          display: flex;
+          justify-content: space-between;
+        }
+        &__product_key {
+          @include pageCheckout;
+        }
+        &__product_value {
+          @include pageCheckout;
+          padding-top: 10px;
+        }
+      }
+    }
+    &__total {
+      padding-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      &__title {
+        @include pageCheckout;
+        text-shadow: 0 0.7px 0 rgb(104, 98, 98);
+      }
+      &__value {
+        @include pageCheckout;
+        text-shadow: 0 0.7px 0 rgb(104, 98, 98);
+      }
+    }
+  }
+}

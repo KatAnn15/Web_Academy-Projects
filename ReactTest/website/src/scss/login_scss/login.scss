@@ -1,0 +1,91 @@
+.login-lightbox {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  z-index: 50;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .login-box__wrapper {
+    .login-box {
+      &__title {
+        font-size: 48px;
+        font-weight: 100;
+        color: rgba(41, 36, 36, 0.842);
+        line-height: 80px;
+      }
+      &__subtitle {
+        font-size: 18px;
+        font-weight: 100;
+        color: rgba(41, 36, 36, 0.842);
+        cursor: pointer;
+      }
+      &__action-bar {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        .login-box_btn {
+          width: 316px;
+          height: 47px;
+          position: relative;
+          color: white;
+          margin: 10px 0;
+          outline: none;
+          border: none;
+          cursor: pointer;
+          &:hover {
+            opacity: 0.9;
+          }
+          img {
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            border-radius: 2px;
+            overflow: hidden;
+          }
+        }
+        .facebook-btn {
+          background-color: #3b5998;
+        }
+        .google-btn {
+          background-color: #1d7ef5;
+        }
+        .email-btn {
+          background-color: white;
+          border: 1px solid rgba(0, 0, 0, 0.109);
+          color: rgb(2, 1, 1);
+          transform: translate(0, -150%);
+          &:hover {
+            border: 1px solid black;
+          }
+        }
+        span {
+          width: 315px;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          overflow: hidden;
+          transform: translate(0, -15%);
+          hr {
+            transform: rotate(90deg);
+            width: 1px;
+            height: 150px;
+            border: 1px solid rgba(128, 128, 128, 0.144);
+          }
+        }
+      }
+    }
+    .lightbox__close-btn {
+      position: absolute;
+      font-size: 40px;
+      top: 60px;
+      right: 80px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.selection-widget {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #16161ac7;
+  height: 640px;
+  width: 750px;
+  border-radius: 15px;
+  color: var(--page-color);
+  padding: 70px 60px;
+}
+.widget__close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(14, 14, 22, 0.808);
+  border: none;
+  border-radius: 50%;
+  font-size: 32px;
+  color: #3d404cb2;
+  cursor: pointer;
+}
+.widget__close-btn:focus {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.747);
+  background-color: #383b46;
+  color: rgba(0, 0, 0, 0.747);
+}
+.widget__close-btn:hover {
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.747);
+}
+.widget__title {
+  font-variant-caps: 24px;
+  line-height: 28px;
+}
+.widget__description {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #636879;
+  margin-top: 16px;
+  display: inline-block;
+  width: 391px;
+}
+.widget-selection {
+  margin-top: 53px;
+  padding: 0;
+}
+.custom-checkbox {
+  display: inline-block;
+}
+.custom-checkbox__native-input {
+  display: none;
+}
+.custom-checkbox__label {
+  width: 194px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #12131a;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 15px 5px;
+  cursor: pointer;
+}
+.custom-checkbox__native-input:checked + .custom-checkbox__label {
+  color: var(--checked-color);
+  border: 1px solid #b02342;
+  box-shadow: 0 0 10px #ff5477;
+}
+.widget__action-bar {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translate(-50%);
+}
+.action-btn {
+  padding: 20px 40px;
+  font-size: 16px;
+  border: 1px solid black;
+  background-color: transparent;
+  color: var(--page-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.action-btn:hover {
+  border: 1px solid #b02342;
+  box-shadow: 0 0 5px rgb(78, 2, 72);
+}
+.action-btn:focus {
+  background-color: #ff2e5c;
+  color: var(--checked-color);
+  box-shadow: 0 0 10px white;
+}
+.action_save {
+  background-color: #b02342;
+  color: var(--checked-color);
+  margin-left: 20px;
+}

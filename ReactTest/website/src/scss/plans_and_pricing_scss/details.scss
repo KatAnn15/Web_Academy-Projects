@@ -1,0 +1,85 @@
+@mixin checkoutFont {
+  font-family: "Avenir Next";
+  font-weight: 100;
+  color: rgb(54, 52, 52);
+}
+.checkout-widget {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-bottom: 50px;
+  .checkout__title {
+    text-align: left;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    color: #9c9898d8;
+    border-bottom: 1px solid rgba(233, 233, 233, 0.561);
+    padding-bottom: 30px;
+    padding-top: 10px;
+  }
+  .checkout-body {
+    display: flex;
+    .checkout__contact-info {
+      width: 470px;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      .checkout__details {
+        position: relative;
+        .details__contact-info {
+          border-bottom: 1px solid rgba(128, 128, 128, 0.527);
+          width: 470px;
+          padding: 30px 0;
+          .info__contact-title {
+            font-size: 24px;
+            @include checkoutFont;
+            span {
+              font-size: 16px;
+              padding-right: 30px;
+            }
+          }
+          .log-out__btn {
+            position: absolute;
+            top: 35px;
+            right: 0;
+            text-decoration: underline;
+            cursor: pointer;
+          }
+          .info__user-email {
+            padding-top: 20px;
+            @include checkoutFont;
+          }
+        }
+      }
+      .details__payment-info {
+        height: 227px;
+        padding: 30px 0;
+        .info__payment__title {
+          @include checkoutFont;
+          font-size: 24px;
+          span {
+            padding-right: 40px;
+            font-size: 24px;
+            @include checkoutFont;
+          }
+        }
+        .payment-info__title {
+          padding: 30px 0;
+          font-size: 20px;
+          @include checkoutFont;
+        }
+        .cannot-accept-payment__wrapper {
+          .cannot-accept-payment__info {
+            @include checkoutFont;
+            font-size: 24px;
+            font-weight: 600;
+            padding-top: 30px;
+            padding-bottom: 10px;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

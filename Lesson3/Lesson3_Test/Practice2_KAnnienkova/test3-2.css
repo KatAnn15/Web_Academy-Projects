@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+ol,
+li,
+p {
+  margin: 0 auto;
+  padding: 0 auto;
+  text-align: center;
+  list-style: none;
+}
+body {
+  background-color: #e5e5e5;
+  font-family: "Courier New", Courier, monospace;
+}
+.container {
+  width: 350px;
+  margin: auto;
+  margin-top: 15%;
+  padding: 11px 98px;
+  background-color: #fefefe;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.25);
+}
+.close-icon {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  margin-left: 140px;
+  display: none;
+  cursor: pointer;
+  font-size: 22px;
+}
+.container:hover .close-icon {
+  display: inline-block;
+}
+.name {
+  font-size: 18px;
+  font-weight: 400;
+}
+.name:hover {
+  color: #535353;
+}
+.profile-img img {
+  size: 154px;
+}
+.social-data {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 31px;
+}
+.data {
+  margin-left: 12px;
+  border-left: 1px solid black;
+  padding-left: 12px;
+  color: #535353;
+}
+.data:hover {
+  color: #0039a8;
+  cursor: grab;
+}
+.data:first-child {
+  margin-left: 0;
+  border-left: none;
+  padding-left: 0;
+}
+.data-value {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 49px;
+}
+.data-name {
+  font-size: 14px;
+  line-height: 16.41px;
+}
+.action-bar {
+  margin-top: 33px;
+  margin-bottom: 48px;
+  display: flex;
+  justify-content: space-around;
+}
+.action-bar button {
+  display: block;
+  min-width: 115px;
+  height: 33px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.follow-btn {
+  background-color: #2add32;
+}
+.follow-btn:hover {
+  background-color: #03831f;
+}
+.message-btn {
+  margin-left: 23px;
+  background-color: #2a67dd;
+}
+.message-btn:hover {
+  background-color: #0039a8;
+}

@@ -1,0 +1,253 @@
+html {
+  font-family: "Lucida Grande" "Lucida Sans", Arial, sans-serif;
+}
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+p {
+  padding: 0 auto;
+  margin: 0 auto;
+  width: 45%;
+  text-align: center;
+  list-style: none;
+}
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 3% 0;
+}
+.logo {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  height: 10%;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 55%;
+}
+.menu li {
+  font-size: 0.9vw;
+}
+.menu li:hover {
+  background-color: rgb(253, 113, 94);
+  color: white;
+  padding: 1% 0;
+  border-radius: 1.4vh;
+}
+.login-area {
+  display: flex;
+  align-items: center;
+  width: 25%;
+}
+span {
+  font-weight: 800;
+}
+.sign-in-btn {
+  border: none;
+  background-color: transparent;
+  padding-right: 2%;
+  width: 50%;
+  height: 100%;
+  border-radius: 2vh;
+  font-size: 0.8vw;
+}
+.sign-in-btn:hover {
+  background-color: rgba(172, 2, 2, 0.842);
+  color: white;
+}
+.sign-up-btn {
+  border-radius: 2vh;
+  border: 1px solid red;
+  color: red;
+  background-color: transparent;
+  width: 50%;
+  height: 100%;
+  font-size: 0.8vw;
+}
+.sign-up-btn:hover {
+  background-color: rgba(172, 2, 2, 0.842);
+  color: white;
+  border: none;
+}
+
+.above-the-fold {
+  display: flex;
+  margin-top: 10%;
+}
+.description {
+  display: flexbox;
+  width: 45%;
+  padding-top: 4%;
+}
+h1 {
+  font-size: 1.7vw;
+  font-weight: 500;
+  width: 100%;
+  text-align: left;
+  line-height: 2.3vw;
+  margin: 0;
+}
+.description h5 {
+  width: 75%;
+  font-weight: unset;
+  font-size: 0.8vw;
+  padding-top: 6%;
+  padding-bottom: 3%;
+  text-align: justify;
+  margin: 0;
+}
+.get-started {
+  margin: 7%;
+  padding: 4.5% 15%;
+  background-color: #f53838;
+  border: none;
+  border-radius: 0.6vh;
+  box-shadow: 3px 5px 3px rgba(87, 4, 4, 0.459),
+    5px 10px 8px rgba(173, 6, 6, 0.363), 5px 20px 15px rgba(223, 3, 3, 0.144);
+  color: white;
+  font-weight: 800;
+  margin-left: 0;
+  display: block;
+}
+.atf-img {
+  align-self: center;
+  width: 60%;
+}
+
+.statistics {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  padding-top: 13%;
+  justify-content: space-around;
+}
+.stats {
+  display: flex;
+  padding-right: 15%;
+  border-right: 1px solid rgba(114, 77, 77, 0.294);
+}
+.stats:nth-child(3) {
+  border-right: none;
+  padding-right: 5%;
+}
+
+.features {
+  display: flex;
+  padding-top: 5%;
+  margin-top: 8%;
+  background-image: linear-gradient(
+    rgba(255, 0, 0, 0),
+    rgba(128, 121, 121, 0.068),
+    rgba(95, 95, 95, 0)
+  );
+}
+h2 {
+  font-size: 1.4vw;
+  width: 75%;
+  line-height: 2vw;
+}
+.features h2 {
+  text-align: left;
+  margin: 0;
+  padding-left: 3%;
+}
+h5 {
+  font-size: 0.7vw;
+  font-weight: unset;
+  padding-top: 3%;
+}
+.features h5 {
+  padding-top: 5%;
+  padding-left: 3%;
+  margin: 0;
+  width: 70%;
+  text-align: justify;
+}
+.main-features-list {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding-left: 15%;
+}
+.main-features-list ul {
+  display: inline-block;
+  width: 100%;
+  padding-top: 10%;
+  font-size: 0.7vw;
+}
+.main-features-list li {
+  text-align: left;
+  line-height: 1.5vw;
+  list-style-image: url("./Assets/Images2/Vector\ \(1\).png");
+  margin-left: 0;
+}
+
+.plans {
+  padding-top: 10%;
+}
+.plans-list {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 8%;
+}
+.plan {
+  width: 100%;
+}
+.features-list li {
+  width: 100%;
+  text-align: left;
+  line-height: 1.5vw;
+  list-style-image: url("./Assets/Images2/Vector\ \(1\).png");
+  margin-left: 0;
+}
+.plans-list h5 {
+  padding: 20% 0 30% 0;
+  font-weight: 800;
+  width: 100%;
+}
+.item-plan {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 27vw;
+}
+.select-btn {
+  width: 90%;
+  bottom: 0;
+  border: rgb(199, 0, 0);
+  color: rgb(180, 3, 3);
+  text-shadow: 1px solid rgb(207, 3, 3);
+  border-radius: 2vh;
+  padding: 0.6vw;
+  font-weight: 700;
+  position: absolute;
+  align-self: center;
+}
+.item-plan h3 {
+  position: absolute;
+  bottom: 13%;
+  align-self: center;
+}
+.select-btn:hover {
+  background-color: rgb(233, 0, 0);
+  color: white;
+}
+.footer {
+  margin: 10% 0%;
+}
+.footer h2 {
+  width: 35%;
+}
+.footer h5 {
+  width: 45%;
+}

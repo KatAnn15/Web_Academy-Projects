@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body,
+ul,
+li,
+h1,
+h2,
+h3,
+p {
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.item {
+  width: 100px;
+  position: absolute;
+}
+
+.basics {
+  left: 30%;
+  top: 10%;
+}
+
+.pro {
+  left: 50%;
+  top: 25%;
+}
+
+.master {
+  left: 75%;
+  top: 50%;
+}
+
+.wizard {
+  left: 40%;
+  top: 70%;
+}
+
+.openModalBtn {
+  padding: 10px;
+  box-sizing: border-box;
+  border: 10px solid rgba(128, 128, 128, 0.219);
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.openModalBtn:hover {
+  border: 10px solid rgba(255, 0, 0, 0.253);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.432);
+}
+
+.openModalBtn span {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.eggFigure {
+  width: 45px;
+  height: 55px;
+  background-color: white;
+  border-radius: 50% 60% 50% 50%/70% 70% 40% 40%;
+  transform: translate(-50%, -5%);
+  background-image: url("../assets/images/egg-background.jpg");
+  background-size: 350%;
+  background-position: 27%;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.modal {
+  width: 500px;
+  height: 410px;
+  background: #ce82ff;
+  position: absolute;
+  border-radius: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  visibility: collapse;
+}
+
+.level,
+.lesson {
+  text-align: left;
+  margin-left: 40px;
+  color: white;
+}
+
+.keyBtn {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  font-size: 30px;
+  transform: rotate(180deg);
+  background-color: transparent;
+  border-radius: 25px;
+  width: 70px;
+  height: 70px;
+  border: 3px solid rgba(61, 58, 58, 0.315);
+  box-shadow: 0 -3px 0 rgba(61, 58, 58, 0.315);
+  cursor: pointer;
+}
+.keyBtn .keyImg {
+  width: 35px;
+  transform: rotate(180deg);
+  margin-top: 5px;
+}
+
+.actionBtnTheory {
+  background-color: transparent;
+  color: white;
+}
+
+.actionBtnStart {
+  background-color: white;
+  color: #c275f5;
+}
+
+.actionBtn {
+  width: 85%;
+  padding: 30px;
+  margin-top: 20px;
+  font-size: 28px;
+  border-radius: 25px;
+  box-shadow: 0 3px 0 rgba(61, 58, 58, 0.315);
+  border: 3px solid rgba(61, 58, 58, 0.315);
+  font-weight: 900;
+}
+.actionBtn:hover {
+  box-shadow: 0 3px 10px white;
+  border: white;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=lesson12.css.map */

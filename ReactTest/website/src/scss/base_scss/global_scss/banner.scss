@@ -1,0 +1,34 @@
+.free-website__banner {
+  position: fixed;
+  z-index: 1;
+  height: 50px;
+  width: 100%;
+  background-color: #eff1f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid rgb(160, 19, 142);
+  cursor: pointer;
+  h5 {
+    font-size: 14px;
+    color: rgb(37, 60, 87);
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .upgrade-site__btn {
+    width: 112px;
+    height: 40px;
+    border-radius: 17px;
+    border: 1px solid rgb(160, 19, 142);
+    margin-left: 5px;
+    color: rgb(160, 19, 142);
+    font-weight: 900;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+    &:hover {
+      background-color: rgb(160, 19, 142);
+      color: white;
+    }
+  }
+}
