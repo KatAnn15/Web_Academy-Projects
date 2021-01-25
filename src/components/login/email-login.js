@@ -1,12 +1,57 @@
 import React from "react";
+import { v4 as uuidv4 } from "uuid";
 
-export default class EmailLogin extends React.Component {
+export default class EmailLoginForm extends React.Component {
+  constructor() {
+    super();
+    this.form = React.createRef();
+    this.email = React.createRef();
+    this.state = {
+      notYetMember: false,
+    };
+  }
+  onFormSubmit = (e) => {
+    e.preventDefault();
+    let email = this.email.current.value;
+    fetch("http://localhost:4000/contacts")
+      .then((resp) => resp.json())
+      .then((data) => {
+        let contacts = data;
+        console.log(contacts);
+        let emails = [];
+        contacts.forEach((contact) => {
+          emails.push(contact.email);
+        });
+        if (emails.indexOf(email) > -1) {
+          console.log("Welcome, ", contacts[emails.indexOf(email)].name);
+        } else {
+          this.setState({ notYetMember: true });
+        }
+      });
+  };
   render() {
     return (
-      <div className="email-sign-up__form">
-        <input type="email" name="email" />
-        <input type="text" name="name" id="" />
-      </div>
+      <form
+        className="email-log-in__form"
+        ref={this.form}
+        onSubmit={(e) => this.onFormSubmit(e)}
+      >
+        {" "}
+        <h3 className="system-message">
+          {this.state.notYetMember
+            ? "Seems like you are not a member yet. Please, sign up"
+            : "Please, enter valid email and name"}
+        </h3>
+        <input
+          ref={this.email}
+          className="email-log-in__input input_email"
+          type="email"
+          placeholder="Email"
+        />
+        <button type="submit" className="email-log-in__submit-btn">
+          Submit
+        </button>
+      </form>
     );
   }
 }

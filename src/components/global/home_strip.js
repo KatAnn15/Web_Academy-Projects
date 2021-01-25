@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TrackVisibility from "react-on-screen";
+import { isMobile } from "react-device-detect";
 
 const ComponentToTrack = ({
   isVisible,
@@ -50,14 +51,27 @@ export default class HomeMainStrip extends React.Component {
         <div className={`strip_${stripName}__wrapper`}>
           <div className={`strip-img img_${stripName}`}></div>
           <div className={`strip-info strip-info_${stripName}`}>
-            <TrackVisibility once>
-              <ComponentToTrack
-                name={stripName}
-                title={title}
-                subtitle={subtitle}
-                description={description}
-              />
-            </TrackVisibility>
+            {isMobile ? (
+              <div className="regular-info-wrapper">
+                <h2 className={`strip-title title_${stripName}`}>{title}</h2>
+                <h3 className={`strip-subtitle subtitle_${stripName}`}>
+                  {subtitle}
+                </h3>
+                <p className={`strip-description description_${stripName}`}>
+                  {description}
+                </p>
+              </div>
+            ) : (
+              <TrackVisibility once>
+                <ComponentToTrack
+                  name={stripName}
+                  title={title}
+                  subtitle={subtitle}
+                  description={description}
+                />
+              </TrackVisibility>
+            )}
+
             <Link to={`{${linkPage}}`}>
               <button className={`strip-action-btn btn_${stripName}`}>
                 {button}

@@ -27,16 +27,7 @@ export default class Navbar extends React.Component {
           <Link className="navbar__link link_contact" to={"/#contact-anchor"}>
             Contact
           </Link>
-          <Link
-            className="navbar__link link_login"
-            to="/login"
-            onClick={() => {
-              console.log(window.location.pathname);
-              // <CurrentPage.Provider value={window.location.pathname}>
-              //   <Login />
-              // </CurrentPage.Provider>;
-            }}
-          >
+          <Link className="navbar__link link_login" to="/login">
             <img
               className="login-icon"
               src={login}

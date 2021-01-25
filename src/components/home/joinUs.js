@@ -1,20 +1,44 @@
 import React from "react";
 import googlePlay from "../../assets/images/home-imgs/main/social-store/google-play.png";
 import appStore from "../../assets/images/home-imgs/main/social-store/app-store.png";
+import { browserName, isAndroid, isIOS, isMobile } from "react-device-detect";
 
 export default class ContactHome extends React.Component {
   constructor() {
     super();
+    this.buttonStyle = {
+      borderRadius: "10px",
+      overflow: "hidden",
+      border: "none",
+    };
+    this.imageStyle = {
+      borderRadius: "10px",
+    };
     this.state = {
       prefix: "inactive",
       phoneNumber: "inactive",
       prefixError: "inactive",
       phones: [],
     };
+
     this.form = React.createRef();
     this.prefix = React.createRef();
     this.phone = React.createRef();
   }
+  componentDidMount = () => {
+    this.resizeScreen();
+  };
+  componentWillUnmount = () => {
+    this.resizeScreen();
+  };
+  resizeScreen = () => {
+    if (window.screen.width < 768) {
+      this.setState({ screen: "mobile" });
+    } else {
+      this.setState({ screen: "large" });
+      console.log(browserName);
+    }
+  };
   onChange = (e, i) => {
     this.setState({ [i]: "active" });
     if (e.target.value.length === 0) {
@@ -110,32 +134,68 @@ export default class ContactHome extends React.Component {
             Send
           </button>
         </form>
-        <div className="join-us-strip__action-bar">
+        {isMobile && isIOS ? (
+          <div className="join-us-strip__action-bar">
+            <button
+              style={this.buttonStyle}
+              className="app-store-btn"
+              onClick={() =>
+                window.open("http://wix.to/csCHCUo?ref=symp_button", "_blank")
+              }
+            >
+              <img
+                width="200px"
+                style={this.imageStyle}
+                src={appStore}
+                className="app-store-icon"
+                alt="app-store-icon"
+              />
+            </button>
+          </div>
+        ) : isMobile && isAndroid ? (
           <button
+            style={this.buttonStyle}
             className="google-play-btn"
             onClick={() =>
               window.open("http://wix.to/csCHCUo?ref=symp_button", "_blank")
             }
           >
             <img
+              style={this.buttonStyle}
+              width="200px"
               src={googlePlay}
               className="google-play-icon"
               alt="google-play-icon"
             />
           </button>
-          <button
-            className="app-store-btn"
-            onClick={() =>
-              window.open("http://wix.to/csCHCUo?ref=symp_button", "_blank")
-            }
-          >
-            <img
-              src={appStore}
-              className="app-store-icon"
-              alt="app-store-icon"
-            />
-          </button>
-        </div>
+        ) : (
+          <div className="join-us-strip__action-bar">
+            <button
+              className="google-play-btn"
+              onClick={() =>
+                window.open("http://wix.to/csCHCUo?ref=symp_button", "_blank")
+              }
+            >
+              <img
+                src={googlePlay}
+                className="google-play-icon"
+                alt="google-play-icon"
+              />
+            </button>
+            <button
+              className="app-store-btn"
+              onClick={() =>
+                window.open("http://wix.to/csCHCUo?ref=symp_button", "_blank")
+              }
+            >
+              <img
+                src={appStore}
+                className="app-store-icon"
+                alt="app-store-icon"
+              />
+            </button>
+          </div>
+        )}
       </div>
     );
   }
