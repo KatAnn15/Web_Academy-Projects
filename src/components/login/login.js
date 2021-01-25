@@ -4,21 +4,32 @@ import facebook_Icon from "../../assets/images/global-imgs/sign-up/facebook-icon
 import google_Icon from "../../assets/images/global-imgs/sign-up/google-logo.jpg";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import GoogleLogin from "react-google-login";
-//import { CurrentPage } from "../../App";
+import EmailLoginForm from "./email-login";
+import EmailSignUpForm from "./emailSignUp";
 
 export default class Login extends React.Component {
   constructor() {
     super();
     this.state = {
       login: false,
+      emailLogin: false,
       isMember: false,
+      logInMode: false,
     };
   }
-  //static contextType = CurrentPage;
+
   openLogIn = () => {
     this.state.login
       ? this.setState({ login: false })
       : this.setState({ login: true });
+    this.state.logInMode
+      ? this.setState({ logInMode: false })
+      : this.setState({ logInMode: true });
+    console.log("this is member state: ", this.state.loginMode);
+    console.log("This is email login state: ", this.state.emailLogin);
+  };
+  openEmailLogin = () => {
+    this.setState({ emailLogin: true });
   };
   responseFacebook = (resp) => {
     console.log(resp);
@@ -187,11 +198,20 @@ export default class Login extends React.Component {
             <span>
               <hr /> or <hr id="hr-right" />
             </span>
-            <button className="login-box_btn email-btn">
-              {this.state.login ? "Log In" : "Sign Up"} with Email
-            </button>
+            {this.state.emailLogin && this.state.logInMode ? (
+              <EmailLoginForm />
+            ) : this.state.emailLogin && this.state.logInMode === false ? (
+              <EmailSignUpForm />
+            ) : (
+              <button
+                className="login-box_btn email-btn"
+                onClick={this.openEmailLogin}
+              >
+                {this.state.login ? "Log In" : "Sign Up"} with Email
+              </button>
+            )}
           </div>
-          <Link to="/" onClick={this.returnPage}>
+          <Link to="/">
             <button className="lightbox__close-btn">&times; </button>
           </Link>
         </div>

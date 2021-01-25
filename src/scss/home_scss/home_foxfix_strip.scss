@@ -65,3 +65,63 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .strip_foxFit {
+    .strip_foxFit__wrapper {
+      .img_foxFit {
+        height: 250px;
+        width: 100%;
+        background-image: url(../../assets/images/home-imgs/main/gym.png);
+        background-size: cover;
+        background-attachment: scroll;
+        margin-top: 5px;
+      }
+      .strip-info_foxFit {
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        h2 {
+          font-size: 65px;
+          font-weight: 100;
+          font-family: "Futura LT Book";
+        }
+        h3 {
+          width: 405px;
+          font-size: 29px;
+          font-weight: 100;
+          line-height: 38px;
+          margin-top: 10px;
+          font-family: "Futura LT Book";
+          width: 400px;
+        }
+        p {
+          width: 500px;
+          margin-top: 30px;
+          font-family: "Futura LT Light";
+          font-weight: 100;
+          font-size: 18px;
+          line-height: 27px;
+        }
+        button {
+          width: 246px;
+          height: 72px;
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          background-color: rgb(238, 255, 66);
+          color: white;
+          font-size: 18px;
+          font-family: "Futura LT Book";
+          border: none;
+          color: rgb(37, 60, 87);
+          cursor: pointer;
+          transition: 0.5s;
+          &:hover {
+            background-color: rgb(37, 60, 87);
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

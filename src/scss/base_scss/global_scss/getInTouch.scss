@@ -115,3 +115,119 @@
     }
   }
 }
+
+@media screen and (max-width: 920px) {
+  .get-in-touch__strip {
+    height: 950px;
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    &__text-wrapper {
+      width: 100%;
+      background-color: rgb(211, 241, 245);
+      padding: 50px 0;
+      .info-wrapper {
+        font-size: 18px;
+        text-align: left;
+        margin: 0 auto;
+        width: 360px;
+        h2 {
+          font-size: 40px;
+          font-weight: 100;
+        }
+        p {
+          font-family: "Futura LT Light";
+          font-weight: 100;
+          margin-top: 20px;
+          line-height: 30px;
+          width: 90%;
+          &:last-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+    &__form-wrapper {
+      width: 100%;
+      padding: 30px 0;
+      background-color: #f2f2f2;
+      position: relative;
+      form {
+        width: 577px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        input {
+          border: none;
+          border-bottom: 2px solid rgb(24, 41, 61);
+          padding-bottom: 10px;
+          padding-left: 5px;
+          min-height: 60px;
+          outline: none;
+          font-size: 18px;
+          font-family: "Futura LT Light";
+          font-weight: 500;
+          color: rgb(24, 41, 61);
+          background-color: transparent;
+          &::placeholder {
+            color: rgb(24, 41, 61);
+          }
+        }
+        .error-message-inactive {
+          display: none;
+        }
+        .error-message-active {
+          font-size: 12px;
+          color: red;
+        }
+        .thank-you-message-inactive {
+          display: none;
+        }
+        .thank-you-message-active {
+          display: block;
+          color: green;
+          font-weight: 100;
+          position: absolute;
+          bottom: 45px;
+          left: 50%;
+          transform: translate(-50%);
+        }
+        textarea {
+          border: none;
+          min-height: 120px;
+          margin-top: 15px;
+          padding-left: 5px;
+          resize: none;
+          outline: none;
+          font-size: 18px;
+          font-family: "Futura LT Light";
+          border-bottom: 2px solid rgb(24, 41, 61);
+          &::placeholder {
+            color: rgb(24, 41, 61);
+          }
+        }
+        .invalid {
+          border-bottom: 2px solid red;
+        }
+        button {
+          width: 100%;
+          margin: 30px auto;
+          background-color: transparent;
+          transition: 0.3s;
+          outline: none;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(238, 255, 66);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 575px) {
+}

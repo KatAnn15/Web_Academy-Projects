@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default class CheckoutSignUp extends React.Component {
   responseGoogle = async (googleData) => {
@@ -26,8 +27,14 @@ export default class CheckoutSignUp extends React.Component {
             your account or sign up.
           </p>
           <div className="checkout__sign-up__action-bar">
-            <button className="checkout_sign-up-btn">Sign Up</button>
-            <button className="checkout_log-in-btn">Log In</button>
+            <Link to="/login">
+              <button Sign Upbutton className="checkout_sign-up-btn">
+                Sign Up
+              </button>
+            </Link>
+            <Link to="/login">
+              <button className="checkout_log-in-btn">Log In</button>
+            </Link>
           </div>
         </div>
         <div className="checkout__sign-up__payment-wrapper">
