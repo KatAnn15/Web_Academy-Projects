@@ -211,7 +211,7 @@ export default class Login extends React.Component {
               </button>
             )}
           </div>
-          <Link to="/">
+          <Link to="/home">
             <button className="lightbox__close-btn">&times; </button>
           </Link>
         </div>

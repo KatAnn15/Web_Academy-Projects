@@ -12,10 +12,17 @@
   }
 }
 
-
 @media screen and (max-width: 920px) {
 }
 @media screen and (max-width: 768px) {
+  .page__content {
+    height: 150px;
+    h1 {
+      width: 100%;
+      font-size: 45px;
+      font-weight: 400;
+    }
+  }
 }
 @media screen and (max-width: 575px) {
 }

@@ -65,61 +65,47 @@
 
 @media screen and (max-width: 768px) {
   .strip_meet-emilia {
-    margin: 150px auto;
+    margin: 0 auto;
     position: relative;
     display: flex;
-    width: 1000px;
+    width: 100%;
     .strip_meet-emilia__wrapper {
-      width: 1500px;
+      width: 100vw;
       position: relative;
+      margin-top: 250px;
       display: flex;
+      flex-direction: column-reverse;
+      background-color: rgb(190, 225, 230);
       .img_meet-emilia {
-        height: 200px;
-        width: 766px;
+        height: 250px;
+        width: 95%;
         background-image: url(../../assets/images/home-imgs/main/emily-with-headset.webp);
         background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100%;
       }
       .strip-info_meet-emilia {
-        background-color: rgb(222, 240, 27);
-        width: 614px;
+        background-color: rgb(238, 251, 90);
+        width: 100%;
         height: 550px;
-        transform: translate(-55%, 20%);
+        transform: translate(0, 0);
         text-align: left;
-        padding: 75px 100px;
+        padding: 50px 40px;
         h2 {
-          font-size: 65px;
-          font-weight: 100;
-          font-family: "Futura LT Book";
+          font-size: 40px;
         }
         h3 {
-          width: 405px;
-          font-size: 29px;
-          font-weight: 100;
-          line-height: 38px;
-          margin-top: 18px;
-          font-family: "Futura LT Book";
+          width: 300px;
+          font-size: 24px;
         }
         p {
-          margin-top: 30px;
-          font-family: "Futura LT Light";
-          font-weight: 100;
-          font-size: 18px;
-          line-height: 27px;
+          width: 330px;
         }
         button {
-          width: 246px;
-          height: 72px;
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          background-color: rgb(37, 60, 87);
-          color: white;
-          font-size: 18px;
-          font-family: "Futura LT Book";
-          cursor: pointer;
-          border: none;
-          outline: none;
-          transition: 0.5s;
+          width: 200px;
+          height: 62px;
+          position: relative;
+          margin-top: 40px;
           &:hover {
             background-color: rgb(190, 225, 230);
             color: rgb(37, 60, 87);

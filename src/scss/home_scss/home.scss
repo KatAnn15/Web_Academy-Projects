@@ -87,83 +87,56 @@
 @media screen and (max-width: 920px) {
 }
 @media screen and (max-width: 768px) {
-  .home-page__above-the-fold-strip {
-    height: 660px;
-    background-image: url(../../assets/images/global-imgs/main.webp);
-    background-size: cover;
-    background-position: 50%;
-    position: relative;
-    .above-the-fold__wrapper {
-      width: 58%;
-      .above-the-fold__info {
-        width: 500px;
-        color: rgb(24, 41, 61);
-        text-align: left;
-        padding-top: 135px;
-        margin: 0 auto;
-      }
+  .common-wrapper {
+    .page__main {
+      margin-top: 7px;
+      height: 280px;
+      padding-top: 40px;
+      background-color: rgba(207, 206, 206, 0.322);
       h1 {
-        line-height: 161px;
-        font-size: 120px;
-        transform: translate(-5px);
+        font-size: 50px;
       }
       h2 {
-        width: 450px;
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 100;
-        font-family: "Futura LT Light";
+        width: 90%;
+        margin: 0 auto;
+      }
+      .social-bar {
+        margin: 0 auto;
+        padding: 20px 0;
+        img {
+          width: 30px;
+        }
+      }
+      .above-the-fold__image-wrapper {
+        margin-top: 10px;
+        height: 200px;
+        background-image: url(../../assets/images/global-imgs/main.webp);
+        background-size: cover;
+        background-position: 45%;
+        .action-bar {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          background-color: red;
+          transform: translate(0, -85px);
+          button {
+            width: 50vw;
+            height: 60px;
+          }
+        }
       }
     }
   }
-  .social-bar {
-    margin-top: 25px;
-    padding-left: 5px;
-    width: 160px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .action-bar {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translate(0, 50%);
-    button {
-      width: 345px;
-      height: 109px;
-      font-size: 18px;
-      border: none;
-      outline: none;
-      cursor: pointer;
-    }
-    .book-a-class {
-      color: white;
-      background-color: rgb(24, 41, 61);
-      transition: 0.5s;
-      &:hover {
-        background-color: #bee2e6;
-        color: rgb(24, 41, 61);
-      }
-    }
-    .discover-foxfit {
-      background-color: #bee2e6;
-      transition: 0.5s;
-      &:hover {
-        background-color: #d8e91d;
-      }
-    }
-  }
-
   .book-online-widget {
-    height: 200px;
-    background-color: rgb(242, 242, 242);
-    margin: 0;
-    padding: 0;
+    height: 190px;
+    margin-top: -210px;
     h2 {
-      color: rgb(37, 60, 87);
-      font-size: 45px;
-      font-weight: 100;
-      margin: 0;
-      padding: 0;
+      font-size: 40px;
+      width: 65%;
+      margin: 0 auto;
+      padding-top: 55px;
     }
   }
 }

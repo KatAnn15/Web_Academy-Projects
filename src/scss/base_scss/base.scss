@@ -57,3 +57,9 @@ a,
 li {
   font-family: "Futura LT Book";
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    max-width: 768px;
+  }
+}

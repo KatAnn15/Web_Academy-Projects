@@ -51,6 +51,7 @@ export default class Home extends React.Component {
           linkPage={this.state.foxfitStripData.linkPage}
           button={this.state.foxfitStripData.button}
         />
+
         <div className="book-online-widget">
           <h2 className="book-online-widget widget__title">
             Book an Online Class

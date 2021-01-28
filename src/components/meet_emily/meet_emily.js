@@ -3,6 +3,7 @@ import Footer from "../global/footer";
 import GetInTouch from "../global/getInTouch";
 import HomeMainStrip from "../global/home_strip";
 import HeaderStrip from "../global/headerStrip";
+import { isMobile } from "react-device-detect";
 
 export default class MeetEmily extends React.Component {
   constructor() {

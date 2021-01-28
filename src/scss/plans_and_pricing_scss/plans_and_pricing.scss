@@ -117,6 +117,178 @@
 @media screen and (max-width: 9920px) {
 }
 @media screen and (max-width: 768px) {
+  .pricing-plans__page-info {
+    font-size: 18px;
+    font-family: "Futura LT Light";
+    margin-left: 30px;
+    width: 80%;
+    text-align: left;
+    margin: 30px;
+  }
+
+  .pricing-plans-widget {
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 50px;
+    &__content {
+      width: 85%;
+      grid-gap: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      .pricing-plan {
+        height: 100%;
+        position: relative;
+        &:nth-child(2) {
+          grid-row: 1/2;
+        }
+        &__label {
+          width: 100px;
+          height: 32px;
+          font-size: 18px;
+          font-family: "Futura LT Light";
+          font-weight: 100;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          transform: translate(-50%, -5px);
+        }
+        &__no-label {
+          display: none;
+        }
+        &__info {
+          padding: 0;
+          padding: 20px 0;
+          height: 380px;
+          display: grid;
+          grid-template-rows: 1fr 2fr 1fr 1fr 1fr 2.5fr;
+          .pricing-plan {
+            &__title {
+              font-size: 22px;
+              font-weight: 700;
+            }
+            &__price {
+              font-size: 51px;
+              padding-left: 5px;
+              padding-top: 0;
+              position: relative;
+              transform: translate(0, 13px);
+              span {
+                font-size: 18px;
+                position: absolute;
+                bottom: 17px;
+              }
+            }
+            &__cycle {
+              font-size: 15px;
+              font-weight: 700;
+            }
+            &__level {
+              font-size: 15px;
+              font-weight: 100;
+              font-family: "Futura LT Light";
+            }
+            &__length {
+              font-size: 15px;
+              font-weight: 900;
+              font-family: "Futura LT Light";
+            }
+            &__book-btn {
+              height: 60px;
+              font-size: 22px;
+              width: 80%;
+              margin: 0 auto;
+              transform: translate(0, 0);
+              &:hover {
+                background-color: rgba(161, 199, 204, 0.685);
+                color: rgb(37, 60, 87, 0.7);
+              }
+            }
+          }
+        }
+        .benefits-hidden {
+          display: none;
+        }
+        .benefits-expanded {
+          border-top: 1px solid rgb(37, 60, 87);
+          height: 263px;
+          width: 100%;
+          padding: 30px;
+          display: block;
+          .benefit-item {
+            font-weight: 100;
+            font-family: "Futura LT Light";
+            font-size: 18px;
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
+  .expand-benefits-btn {
+    width: 50px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 25px);
+    span {
+      position: absolute;
+      &::before {
+        content: " ";
+        background-color: rgb(28, 70, 133);
+        width: 10px;
+        border: 0.5px solid rgb(28, 70, 133);
+        position: absolute;
+        transform: rotate(45deg);
+        right: calc(100% - 2px);
+      }
+      &::after {
+        content: " ";
+        background-color: rgb(28, 70, 133);
+        width: 10px;
+        border: 0.5px solid rgb(28, 70, 133);
+        position: absolute;
+        transform: rotate(-45deg);
+        left: calc(100% - 2px);
+      }
+    }
+  }
+}
+.benefits-button-hidden {
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 50px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  span {
+    position: relative;
+    margin: 0 auto;
+    &::before {
+      content: " ";
+      background-color: rgb(28, 70, 133);
+      width: 10px;
+      border: 0.5px solid rgb(28, 70, 133);
+      position: absolute;
+      transform: rotate(45deg);
+      left: calc(100% - 2px);
+    }
+    &::after {
+      content: " ";
+      background-color: rgb(28, 70, 133);
+      width: 10px;
+      border: 0.5px solid rgb(28, 70, 133);
+      position: absolute;
+      transform: rotate(-45deg);
+      right: calc(100% - 2px);
+    }
+  }
 }
 @media screen and (max-width: 575px) {
 }
