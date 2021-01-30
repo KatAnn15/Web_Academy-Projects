@@ -125,7 +125,7 @@
     background-repeat: no-repeat;
     background-attachment: inherit;
     width: 100%;
-    height: 375px;
+    height: 370px;
     padding-top: 30px;
     .join-us-strip__text-wrapper {
       .join-us-strip__title {
@@ -157,13 +157,6 @@
 }
 @media screen and (max-width: 768px) {
   .join-us-strip {
-    background-image: url(../../assets/images/home-imgs/main/shoes-mobile.webp);
-    background-size: 100% 370px;
-    background-repeat: no-repeat;
-    background-attachment: inherit;
-    width: 100%;
-    height: 375px;
-    padding-top: 30px;
     .join-us-strip__text-wrapper {
       text-align: center;
       .join-us-strip__title {

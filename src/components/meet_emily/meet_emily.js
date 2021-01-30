@@ -21,6 +21,7 @@ export default class MeetEmily extends React.Component {
     this.setState({ visionBoxData: visionBoxData });
   };
   componentDidMount = () => {
+    window.scrollTo(0, 0);
     this.fetchData();
   };
   render() {

@@ -62,7 +62,7 @@ export default class HomeMainStrip extends React.Component {
                 </p>
               </div>
             ) : (
-              <TrackVisibility once>
+              <TrackVisibility once partialVisibility={true}>
                 <ComponentToTrack
                   name={stripName}
                   title={title}
@@ -72,7 +72,7 @@ export default class HomeMainStrip extends React.Component {
               </TrackVisibility>
             )}
 
-            <Link to={`{${linkPage}}`}>
+            <Link to={`${linkPage}`}>
               <button className={`strip-action-btn btn_${stripName}`}>
                 {button}
               </button>

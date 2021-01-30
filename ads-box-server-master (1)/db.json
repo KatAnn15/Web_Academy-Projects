@@ -21,58 +21,299 @@
       "createdAt": 1611481579687
     },
     {
-      "id": "1f7508a0-16a9-4434-9a06-0147903a6a6c",
-      "createdAt": 1611510685862
-    },
-    {
       "email": "tatianaviegh@gmail.com",
       "name": "Tatiana",
       "id": "178b470a-adad-4564-91c9-b915726f1896",
       "createdAt": 1611511206418
+    },
+    {
+      "email": "blabalojh@gmail.com",
+      "name": "labla",
+      "id": "a8289b32-c361-4669-bc9e-6225ab431da6",
+      "createdAt": 1612017707329
     }
   ],
-  "posts": [
+  "messages": [
     {
-      "firstName": "Alexander Brews",
-      "lastName": "Beauty and the beast",
-      "email": "Beauty and the Beast focuses on the relationship between the Beast (voice of Robby Benson), a prince who is magically transformed into a monster and his servants into household objects as punishment for his arrogance, and Belle (voice of Paige O'Hara), a young woman whom he imprisons in his castle.",
-      "subject": "beauty_and_the_beast.jpeg",
-      "message": "message",
+      "message": "Hello World!",
+      "createdAt": 1612020352288,
+      "author": "",
+      "image": " ",
       "id": 1
     },
     {
-      "prefix": "77",
-      "phone": "777",
-      "createdAt": 1611166666225,
-      "image": "default-image.png",
-      "id": 2
+      "message": " this is for you",
+      "author": "Visitor",
+      "createdAt": 1612034438591,
+      "image": "../src/assets/images/user-uploads/Abel.jpg",
+      "authorImage": "src/assets/images/user-uploads/1612034438583-bouquet_mix.jpg",
+      "id": 6
     },
     {
-      "prefix": "7",
-      "phone": "7",
-      "createdAt": 1611175328667,
-      "image": "default-image.png",
-      "id": 3
+      "message": "hgj",
+      "author": "Visitor",
+      "createdAt": 1612034487315,
+      "image": "src/assets/images/user-uploads/Uno.jpg",
+      "id": 7
     },
     {
-      "prefix": "+380",
-      "phone": "",
-      "createdAt": 1611178744485,
-      "image": "default-image.png",
-      "id": 4
+      "message": " ",
+      "author": "Visitor",
+      "createdAt": 1612034495598,
+      "image": "../src/assets/images/user-uploads/Aro.jpeg",
+      "authorImage": "src/assets/images/user-uploads/1612034495595-lilies.jpeg",
+      "id": 8
     },
     {
-      "prefix": "+380",
-      "phone": "",
-      "createdAt": 1611178778635,
-      "image": "default-image.png",
-      "id": 5
+      "message": "hello",
+      "author": "Visitor",
+      "createdAt": 1612035808762,
+      "image": " ",
+      "id": 9
+    },
+    {
+      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
+      "author": "chatbot",
+      "createdAt": 1612035808807,
+      "image": " ",
+      "id": 10
+    },
+    {
+      "message": "hello",
+      "author": "Visitor",
+      "createdAt": 1612037477533,
+      "image": " ",
+      "id": 11
+    },
+    {
+      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
+      "author": "chatbot",
+      "createdAt": 1612037477597,
+      "image": " ",
+      "id": 12
+    },
+    {
+      "message": "Hello",
+      "author": "Visitor",
+      "createdAt": 1612037585421,
+      "image": " ",
+      "id": 13
+    },
+    {
+      "message": "Hello",
+      "author": "Visitor",
+      "createdAt": 1612037719359,
+      "image": " ",
+      "id": 14
+    },
+    {
+      "message": "Hello",
+      "author": "Visitor",
+      "createdAt": 1612037814540,
+      "image": " ",
+      "id": 15
+    },
+    {
+      "message": "hello",
+      "author": "Visitor",
+      "createdAt": 1612037872859,
+      "image": " ",
+      "id": 16
+    },
+    {
+      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
+      "author": "chatbot",
+      "createdAt": 1612037872884,
+      "image": " ",
+      "id": 17
+    },
+    {
+      "message": "hello",
+      "author": "Visitor",
+      "createdAt": 1612037928070,
+      "image": " ",
+      "id": 18
+    },
+    {
+      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
+      "author": "chatbot",
+      "createdAt": 1612037928095,
+      "image": " ",
+      "id": 19
+    },
+    {
+      "message": "Hello",
+      "author": "Visitor",
+      "createdAt": 1612037945160,
+      "image": " ",
+      "id": 20
+    },
+    {
+      "message": "hi",
+      "author": "Visitor",
+      "createdAt": 1612037985405,
+      "image": " ",
+      "id": 21
+    },
+    {
+      "message": "hi",
+      "author": "Visitor",
+      "createdAt": 1612038041538,
+      "image": " ",
+      "id": 22
+    },
+    {
+      "message": "rgre",
+      "author": "Visitor",
+      "createdAt": 1612038096853,
+      "image": " ",
+      "id": 23
+    },
+    {
+      "message": "bggg",
+      "author": "Visitor",
+      "createdAt": 1612038117747,
+      "image": " ",
+      "id": 24
+    },
+    {
+      "message": "erf",
+      "author": "Visitor",
+      "createdAt": 1612038227928,
+      "image": " ",
+      "id": 25
+    },
+    {
+      "message": "j",
+      "author": "Visitor",
+      "createdAt": 1612038292194,
+      "image": " ",
+      "id": 26
+    },
+    {
+      "message": "h",
+      "author": "Visitor",
+      "createdAt": 1612038319879,
+      "image": " ",
+      "id": 27
+    },
+    {
+      "message": "j",
+      "author": "Visitor",
+      "createdAt": 1612038409396,
+      "image": " ",
+      "id": 28
+    },
+    {
+      "message": "h",
+      "author": "Visitor",
+      "createdAt": 1612038463407,
+      "image": " ",
+      "id": 29
+    },
+    {
+      "message": "k",
+      "author": "Visitor",
+      "createdAt": 1612038486262,
+      "image": " ",
+      "id": 30
+    },
+    {
+      "message": "fvfd v",
+      "author": "Visitor",
+      "createdAt": 1612038500965,
+      "image": " ",
+      "id": 31
+    },
+    {
+      "message": "hi",
+      "author": "Visitor",
+      "createdAt": 1612041072550,
+      "image": " ",
+      "id": 32
+    },
+    {
+      "message": "i",
+      "author": "Visitor",
+      "createdAt": 1612041487192,
+      "image": " ",
+      "id": 33
+    },
+    {
+      "message": "wix",
+      "author": "Visitor",
+      "createdAt": 1612041531084,
+      "image": " ",
+      "id": 34
+    },
+    {
+      "message": "You can learn more about wix on my website, feel free to browse!",
+      "author": "chatbot",
+      "createdAt": 1612041531142,
+      "image": " ",
+      "id": 35
+    },
+    {
+      "message": "wix",
+      "author": "Visitor",
+      "createdAt": 1612041795022,
+      "image": " ",
+      "id": 36
+    },
+    {
+      "message": "Wix is a platform for creating websites. Click on the banner on top of the page to get started",
+      "author": "chatbot",
+      "createdAt": 1612041795074,
+      "image": " ",
+      "id": 37
+    },
+    {
+      "message": " interested",
+      "author": "Visitor",
+      "createdAt": 1612041804027,
+      "image": " ",
+      "id": 38
+    },
+    {
+      "message": "Glad we share some common interests! Please, let me know what you thing and my team will get back to you soon",
+      "author": "chatbot",
+      "createdAt": 1612041804062,
+      "image": " ",
+      "id": 39
+    },
+    {
+      "message": "interested in plans",
+      "author": "Visitor",
+      "createdAt": 1612041872630,
+      "image": " ",
+      "id": 40
+    },
+    {
+      "message": "I see you would like to start out small journey. Please, check the ZPricing Plans information by moving to the relevant page",
+      "author": "chatbot",
+      "createdAt": 1612041872657,
+      "image": " ",
+      "id": 41
+    },
+    {
+      "message": "Glad we share some common interests! Please, let me know what you think and my team will get back to you soon",
+      "author": "chatbot",
+      "createdAt": 1612041872658,
+      "image": " ",
+      "id": 42
     }
   ],
   "phones": [
     {
       "prefix": "+380",
-      "phone": "660809456"
+      "phone": "660809456",
+      "id": 1
+    },
+    {
+      "prefix": "+380",
+      "phone": "76543223456",
+      "createdAt": 1612018351451,
+      "id": 2
     }
   ],
   "advertisments": [

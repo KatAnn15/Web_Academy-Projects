@@ -10,6 +10,7 @@ import PlansAndPricing from "./components/plans_and_pricing/plans_and_pricing";
 import Login from "./components/login/login";
 import Banner from "./components/global/banner";
 import { createBrowserHistory } from "history";
+import { ChatWidget } from "./components/global/chat/chat";
 
 function App() {
   const history = createBrowserHistory();
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
         </Routes>
       </Router>
+      <ChatWidget />
     </div>
   );
 }

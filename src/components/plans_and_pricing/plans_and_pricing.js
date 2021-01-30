@@ -20,6 +20,9 @@ export default class PlansAndPricing extends React.Component {
   closeCheckout = () => {
     this.setState({ checkoutState: false });
   };
+  componentDidMount = () => {
+    window.scrollTo(0, 0);
+  };
   render() {
     return (
       <div className="page__container">
@@ -29,10 +32,11 @@ export default class PlansAndPricing extends React.Component {
           users get to know you.
         </p>
         {this.state.checkoutState ? (
-          <CheckoutPage id={this.state.id} />
+          <CheckoutPage id={this.state.id} closeCheckout={this.closeCheckout} />
         ) : (
           <PricingPlansWidget openCheckout={this.openCheckout} />
         )}
+
         <GetInTouch />
         <Footer />
       </div>

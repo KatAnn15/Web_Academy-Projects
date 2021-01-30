@@ -8,7 +8,7 @@ const path = require("path");
 const cors = require("cors");
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "public/images");
+    cb(null, "../src/assets/images/user-uploads");
   },
   filename: (req, file, cb) => {
     // For Windows: It is good for Unix systems: new Date().toISOString() + "-" + file.originalname
@@ -48,17 +48,15 @@ server.use((req, res, next) => {
   // Continue to JSON Server router
   next();
 });
-server.post("/posts", (req, res, next) => {
+server.post("/messages", (req, res, next) => {
   if (req.file && req.file.path) {
     const [_, ...rest] = req.file.path.split("/");
     req.body.image = rest.join("/");
     req.body.authorImage = rest.join("/");
     // For Windows: Some changes in file path
-    req.body.image = req.file.path
-      .replace(/\\/g, "/")
-      .replace("public/", "");
+    req.body.image = req.file.path.replace(/\\/g, "/").replace("public/", "");
   } else {
-    req.body.image = "default-image.png";
+    req.body.image = " ";
   }
   next();
 });

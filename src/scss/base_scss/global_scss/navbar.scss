@@ -46,7 +46,7 @@
     border-bottom: 3px solid black;
     outline: none;
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     right: 25px;
     transform: translate(0, 80%);
     z-index: 5;
@@ -67,8 +67,7 @@
     outline: none;
     transform: translate(-50px, 30px);
     background-color: transparent;
-    position: relative;
-    position: absolute;
+    position: fixed;
     right: 45px;
     transform: translate(0, 80%);
     z-index: 5;
@@ -159,7 +158,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      z-index: 1;
+      z-index: 0;
       opacity: 0;
       .navbar__link {
         color: white;

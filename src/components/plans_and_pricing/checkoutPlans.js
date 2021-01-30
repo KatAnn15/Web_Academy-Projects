@@ -27,6 +27,12 @@ export default class CheckoutPage extends React.Component {
   render() {
     return (
       <div className="checkout-widget">
+        <button
+          className="close-checkout-btn"
+          onClick={this.props.closeCheckout}
+        >
+          Back
+        </button>
         <h2 className="checkout__title">Checkout</h2>
         <div className="checkout-body">
           <div className="checkout__contact-info">

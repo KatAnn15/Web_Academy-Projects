@@ -52,7 +52,7 @@ export default class AboveTheFold extends React.Component {
                         Discover FoxFit
                       </button>
                     </Link>
-                    <Link to="/">
+                    <Link to="/plans-pricing">
                       <button className="call-to-action book-a-class">
                         Book a Class
                       </button>
@@ -79,7 +79,7 @@ export default class AboveTheFold extends React.Component {
                   Discover FoxFit
                 </button>
               </Link>
-              <Link to="/">
+              <Link to="/plans-pricing">
                 <button className="call-to-action book-a-class">
                   Book a Class
                 </button>

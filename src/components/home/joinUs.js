@@ -10,6 +10,8 @@ export default class ContactHome extends React.Component {
       borderRadius: "10px",
       overflow: "hidden",
       border: "none",
+      backgroundColor: "black",
+      width: "170px",
     };
     this.imageStyle = {
       borderRadius: "10px",
@@ -27,6 +29,7 @@ export default class ContactHome extends React.Component {
   }
   componentDidMount = () => {
     this.resizeScreen();
+    this.fetchPhones();
   };
   componentWillUnmount = () => {
     this.resizeScreen();
@@ -47,42 +50,47 @@ export default class ContactHome extends React.Component {
   };
   submitForm(e) {
     e.preventDefault();
-    const formData = new FormData(this.form.current);
-    console.log(this.state.phones);
-
+    let phoneValid = [];
     this.state.phones.forEach((item) => {
       if (
-        this.prefix.current.value !== `+${item}` ||
-        this.phone.current.value.length < 4
+        this.prefix.current.value === `+${item}` ||
+        this.prefix.current.value === item
       ) {
-        console.log("Prefix is not correct: ", item);
-        return this.setState({ prefixError: "active" });
-      } else {
-        return fetch("http://localhost:4000/posts", {
-          method: "POST",
-          body: formData,
-        })
-          .then((resp) => {
-            console.log(resp);
-            return resp.json();
-          })
-          .then((data) => {
-            console.log(data);
-            this.setState({ prefixError: "inactive" });
-          })
-          .catch((err) => {
-            console.log("This is error: ", err);
-          });
+        phoneValid.push(item);
+        console.log(phoneValid);
       }
     });
-  }
-  componentDidMount() {
-    this.fetchPhones();
+    if (phoneValid.length < 0 || this.phone.current.value.length < 4) {
+      console.log("Prefix is not correct: ");
+      return this.setState({ prefixError: "active" });
+    } else {
+      console.log("Data is correct, start fetching");
+      return fetch("http://localhost:4000/phones", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prefix: this.prefix.current.value,
+          phone: this.phone.current.value,
+        }),
+      })
+        .then((resp) => {
+          console.log(resp);
+          return resp.json();
+        })
+        .then((data) => {
+          console.log(data);
+          this.setState({ prefixError: "inactive" });
+        })
+        .catch((err) => {
+          console.log("This is error: ", err);
+        });
+    }
   }
 
   fetchPhones() {
     const fetchedPhones = require("../../assets/json/phones.json");
-
     const phonesArr = [];
     fetchedPhones.phones.forEach((phone) => {
       phonesArr.push(Object.values(phone)[0]);

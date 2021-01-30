@@ -1,0 +1,101 @@
+@import "./chat-body.scss";
+@mixin info {
+  color: white;
+  line-height: 40px;
+  font-family: "Futura LT Light";
+}
+
+.chat-common-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.chat-widget {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  right: 0;
+  .chat-desktop_regular {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    background-color: rgb(61, 65, 85);
+    border-radius: 50%;
+    cursor: pointer;
+    .chat-desktop_regular__wrapper {
+      width: 30px;
+      height: 30px;
+      background-color: white;
+      content: " ";
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      &::after {
+        content: " ";
+        display: block;
+        position: absolute;
+        right: 4px;
+        bottom: 0;
+        border-left: 5px solid transparent;
+        border-right: 2px solid transparent;
+        border-top: 5px solid white;
+        width: 0;
+        height: 0;
+        transform: rotate(90deg);
+      }
+      span {
+        transform: translate(-6px, 2px);
+        position: absolute;
+      }
+    }
+  }
+  .chat-desktop_expanded {
+    width: 335px;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    background-color: rgb(37, 60, 87);
+    transition: all 0.4s;
+    button {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      font-size: 30px;
+      padding: 0 10px;
+      border: none;
+      border-radius: 50%;
+      background-color: transparent;
+      outline: none;
+      color: rgb(189, 184, 184);
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.253);
+      }
+    }
+    .chat_expanded__info {
+      padding: 60px 0 5px 0;
+      height: 260px;
+      img {
+        border-radius: 50%;
+        border: 2px solid white;
+      }
+      h3 {
+        @include info();
+      }
+      h4 {
+        @include info();
+      }
+      h5 {
+        @include info();
+        span {
+          color: white;
+          padding-right: 5px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

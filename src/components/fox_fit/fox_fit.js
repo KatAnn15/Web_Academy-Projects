@@ -18,6 +18,7 @@ export default class FoxFit extends React.Component {
     };
   }
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.getJsonData();
   }
   getJsonData() {

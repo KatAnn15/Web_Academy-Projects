@@ -15,6 +15,7 @@ export default class Home extends React.Component {
     };
   }
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.getJsonData();
   }
   getJsonData() {

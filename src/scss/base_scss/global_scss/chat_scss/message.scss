@@ -1,0 +1,38 @@
+.message-data {
+  padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  .message-item {
+    max-width: 250px;
+    text-align: left;
+    display: inline;
+    background-color: rgba(49, 63, 124, 0.178);
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-size: 14.3px;
+    color: rgb(83, 59, 59);
+    font-family: "Futura LT Light";
+    letter-spacing: 0.5px;
+    word-wrap: break-word;
+  }
+}
+
+.reply-data {
+  padding: 5px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  .reply-item {
+    max-width: 250px;
+    text-align: left;
+    display: inline;
+    background-color: rgba(109, 49, 124, 0.178);
+    padding: 10px 15px;
+    border-radius: 7px;
+    font-size: 14.3px;
+    color: rgb(83, 59, 59);
+    font-family: "Futura LT Light";
+    letter-spacing: 0.5px;
+    word-wrap: break-word;
+  }
+}

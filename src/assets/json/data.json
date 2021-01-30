@@ -44,19 +44,21 @@
       "stripName": "main-meet-emily",
       "title": "Certified Fitness Trainer and Personal Coach",
       "description": "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.",
-      "linkPage": "/",
+      "linkPage": "/meet-emily",
       "button": "Book a Class"
     },
     {
       "stripName": "vision",
       "title": "My Vision",
-      "description": "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you."
+      "description": "I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.",
+      "linkPage": "/"
     },
     {
       "stripName": "main-fox-fit",
       "title": "The Ultimate Method to Change Your Life",
       "description": "I'm 'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.",
-      "description2": "This is a great space to write a long text about your company and your services. You can use this space to go into a little more detail about your company."
+      "description2": "This is a great space to write a long text about your company and your services. You can use this space to go into a little more detail about your company.",
+      "linkPage": "/"
     }
   ],
   "foxFitPerks": [
