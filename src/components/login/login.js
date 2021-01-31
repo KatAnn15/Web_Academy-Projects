@@ -5,6 +5,7 @@ import google_Icon from "../../assets/images/global-imgs/sign-up/google-logo.jpg
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
 import GoogleLogin from "react-google-login";
 import EmailLoginForm from "./email-login";
+import { isMobile } from "react-device-detect";
 import EmailSignUpForm from "./emailSignUp";
 
 export default class Login extends React.Component {
@@ -16,6 +17,9 @@ export default class Login extends React.Component {
       isMember: false,
       logInMode: false,
     };
+    this.url = isMobile
+      ? "http://192.168.1.7:4000/contacts"
+      : "http://localhost:4000/contacts";
   }
 
   openLogIn = () => {
@@ -33,7 +37,7 @@ export default class Login extends React.Component {
   };
   responseFacebook = (resp) => {
     console.log(resp);
-    fetch("http://localhost:4000/contacts")
+    fetch(this.url)
       .then((resp) => resp.json())
       .then((data) => {
         let contacts = data;
@@ -53,7 +57,7 @@ export default class Login extends React.Component {
   };
   responseGoogle = (response) => {
     console.log(response.profileObj);
-    fetch("http://localhost:4000/contacts")
+    fetch(this.url)
       .then((resp) => resp.json())
       .then((data) => {
         let contacts = data;
@@ -73,7 +77,7 @@ export default class Login extends React.Component {
 
   updateMember = (response, id) => {
     console.log("Thsis is the PUT response: ", response);
-    fetch(`http://localhost:4000/contacts/${id}`, {
+    fetch(`${this.url}/${id}`, {
       method: "PATCH",
       body: JSON.stringify({
         email: response.email,
@@ -90,7 +94,7 @@ export default class Login extends React.Component {
       });
   };
   newMember = (response, id) => {
-    fetch("http://localhost:4000/contacts", {
+    fetch(this.url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -211,9 +215,9 @@ export default class Login extends React.Component {
               </button>
             )}
           </div>
-          <Link to="/home">
-            <button className="lightbox__close-btn">&times; </button>
-          </Link>
+          <button className="lightbox__close-btn" onClick={() => window.back}>
+            &times;{" "}
+          </button>
         </div>
       </div>
     );

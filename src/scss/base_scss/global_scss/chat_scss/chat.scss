@@ -59,7 +59,7 @@
     right: 30px;
     background-color: rgb(37, 60, 87);
     transition: all 0.4s;
-    button {
+    .chat_collapse {
       position: absolute;
       top: 15px;
       right: 15px;
@@ -73,6 +73,21 @@
       cursor: pointer;
       &:hover {
         background-color: rgba(128, 128, 128, 0.253);
+      }
+    }
+    .close-action-bar {
+      position: absolute;
+      top: -20px;
+      right: 0;
+      button {
+        background-color: rgb(251, 251, 251);
+        outline: none;
+        border: 1px solid gray;
+        border-radius: 5px;
+        padding: 5px;
+        color: rgb(1, 3, 87);
+        margin: 5px;
+        cursor: pointer;
       }
     }
     .chat_expanded__info {
@@ -94,6 +109,115 @@
           color: white;
           padding-right: 5px;
           font-size: 18px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .chat-widget {
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    right: 0;
+    .chat-mobile_regular {
+      position: absolute;
+      bottom: 30px;
+      right: 30px;
+      width: 65px;
+      height: 65px;
+      background-color: rgb(61, 65, 85);
+      border-radius: 50%;
+      cursor: pointer;
+      &__wrapper {
+        width: 23px;
+        height: 19px;
+        background-color: white;
+        content: " ";
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 10%;
+        &::after {
+          content: " ";
+          display: block;
+          position: absolute;
+          left: 5px;
+          bottom: -5px;
+          border-left: 7px solid transparent;
+          border-right: 2px solid transparent;
+          border-top: 5px solid white;
+          width: 0;
+          height: 0;
+          transform: rotate(270deg);
+        }
+      }
+    }
+    .chat-mobile_expanded {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding-top: 50px;
+      background-color: rgb(37, 60, 87);
+      overflow: hidden;
+      .chat_collapse {
+        position: absolute;
+        top: 65px;
+        right: 15px;
+        font-size: 30px;
+        padding: 0 10px;
+        border: none;
+        border-radius: 50%;
+        background-color: transparent;
+        outline: none;
+        color: rgb(189, 184, 184);
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(128, 128, 128, 0.253);
+        }
+      }
+      .close-action-bar {
+        position: absolute;
+        display: flex;
+        right: 0;
+        top: 120px;
+        flex-direction: column;
+        width: 110px;
+        button {
+          background-color: rgb(251, 251, 251);
+          outline: none;
+          border: 1px solid gray;
+          border-radius: 5px;
+          width: 90%;
+          height: 40px;
+          color: rgb(1, 3, 87);
+          margin: 5px;
+          cursor: pointer;
+        }
+      }
+      .chat_expanded__info {
+        padding: 80px 0 5px 0;
+        height: 320px;
+        img {
+          border-radius: 50%;
+          border: 2px solid white;
+        }
+        h3 {
+          @include info();
+        }
+        h4 {
+          @include info();
+        }
+        h5 {
+          @include info();
+          span {
+            color: white;
+            padding-right: 5px;
+            font-size: 18px;
+          }
         }
       }
     }

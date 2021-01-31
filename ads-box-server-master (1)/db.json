@@ -31,276 +31,51 @@
       "name": "labla",
       "id": "a8289b32-c361-4669-bc9e-6225ab431da6",
       "createdAt": 1612017707329
+    },
+    {
+      "email": "kateryna.annienkova@qatestlab.eu",
+      "name": "Do",
+      "id": "401cbf50-5fa7-4dc2-9721-898dbcf211c2",
+      "createdAt": 1612109723584
+    }
+  ],
+  "posts": [
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "subject": "",
+      "message": "",
+      "id": 1
+    },
+    {
+      "firstName": "Kateryna",
+      "lastName": "Annienkova",
+      "email": "katherineviegh@gmail.com",
+      "subject": "Test",
+      "message": "Submit",
+      "createdAt": 1612102562491,
+      "id": 2
+    },
+    {
+      "firstName": "Kateryna",
+      "lastName": "Annienkova",
+      "email": "katherineviegh@gmail.com",
+      "subject": "Gg",
+      "message": "Yyy",
+      "createdAt": 1612102604688,
+      "id": 3
     }
   ],
   "messages": [
     {
-      "message": "Hello World!",
-      "createdAt": 1612020352288,
-      "author": "",
-      "image": " ",
+      "message": "This is the beginning of your conversation with Emily",
+      "author": "system",
+      "createdAt": 1612083029053,
+      "date": "",
+      "image": "",
+      "authorImage": "src/assets/images/user-uploads/1612083029046-peonies.jpg",
       "id": 1
-    },
-    {
-      "message": " this is for you",
-      "author": "Visitor",
-      "createdAt": 1612034438591,
-      "image": "../src/assets/images/user-uploads/Abel.jpg",
-      "authorImage": "src/assets/images/user-uploads/1612034438583-bouquet_mix.jpg",
-      "id": 6
-    },
-    {
-      "message": "hgj",
-      "author": "Visitor",
-      "createdAt": 1612034487315,
-      "image": "src/assets/images/user-uploads/Uno.jpg",
-      "id": 7
-    },
-    {
-      "message": " ",
-      "author": "Visitor",
-      "createdAt": 1612034495598,
-      "image": "../src/assets/images/user-uploads/Aro.jpeg",
-      "authorImage": "src/assets/images/user-uploads/1612034495595-lilies.jpeg",
-      "id": 8
-    },
-    {
-      "message": "hello",
-      "author": "Visitor",
-      "createdAt": 1612035808762,
-      "image": " ",
-      "id": 9
-    },
-    {
-      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
-      "author": "chatbot",
-      "createdAt": 1612035808807,
-      "image": " ",
-      "id": 10
-    },
-    {
-      "message": "hello",
-      "author": "Visitor",
-      "createdAt": 1612037477533,
-      "image": " ",
-      "id": 11
-    },
-    {
-      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
-      "author": "chatbot",
-      "createdAt": 1612037477597,
-      "image": " ",
-      "id": 12
-    },
-    {
-      "message": "Hello",
-      "author": "Visitor",
-      "createdAt": 1612037585421,
-      "image": " ",
-      "id": 13
-    },
-    {
-      "message": "Hello",
-      "author": "Visitor",
-      "createdAt": 1612037719359,
-      "image": " ",
-      "id": 14
-    },
-    {
-      "message": "Hello",
-      "author": "Visitor",
-      "createdAt": 1612037814540,
-      "image": " ",
-      "id": 15
-    },
-    {
-      "message": "hello",
-      "author": "Visitor",
-      "createdAt": 1612037872859,
-      "image": " ",
-      "id": 16
-    },
-    {
-      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
-      "author": "chatbot",
-      "createdAt": 1612037872884,
-      "image": " ",
-      "id": 17
-    },
-    {
-      "message": "hello",
-      "author": "Visitor",
-      "createdAt": 1612037928070,
-      "image": " ",
-      "id": 18
-    },
-    {
-      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
-      "author": "chatbot",
-      "createdAt": 1612037928095,
-      "image": " ",
-      "id": 19
-    },
-    {
-      "message": "Hello",
-      "author": "Visitor",
-      "createdAt": 1612037945160,
-      "image": " ",
-      "id": 20
-    },
-    {
-      "message": "hi",
-      "author": "Visitor",
-      "createdAt": 1612037985405,
-      "image": " ",
-      "id": 21
-    },
-    {
-      "message": "hi",
-      "author": "Visitor",
-      "createdAt": 1612038041538,
-      "image": " ",
-      "id": 22
-    },
-    {
-      "message": "rgre",
-      "author": "Visitor",
-      "createdAt": 1612038096853,
-      "image": " ",
-      "id": 23
-    },
-    {
-      "message": "bggg",
-      "author": "Visitor",
-      "createdAt": 1612038117747,
-      "image": " ",
-      "id": 24
-    },
-    {
-      "message": "erf",
-      "author": "Visitor",
-      "createdAt": 1612038227928,
-      "image": " ",
-      "id": 25
-    },
-    {
-      "message": "j",
-      "author": "Visitor",
-      "createdAt": 1612038292194,
-      "image": " ",
-      "id": 26
-    },
-    {
-      "message": "h",
-      "author": "Visitor",
-      "createdAt": 1612038319879,
-      "image": " ",
-      "id": 27
-    },
-    {
-      "message": "j",
-      "author": "Visitor",
-      "createdAt": 1612038409396,
-      "image": " ",
-      "id": 28
-    },
-    {
-      "message": "h",
-      "author": "Visitor",
-      "createdAt": 1612038463407,
-      "image": " ",
-      "id": 29
-    },
-    {
-      "message": "k",
-      "author": "Visitor",
-      "createdAt": 1612038486262,
-      "image": " ",
-      "id": 30
-    },
-    {
-      "message": "fvfd v",
-      "author": "Visitor",
-      "createdAt": 1612038500965,
-      "image": " ",
-      "id": 31
-    },
-    {
-      "message": "hi",
-      "author": "Visitor",
-      "createdAt": 1612041072550,
-      "image": " ",
-      "id": 32
-    },
-    {
-      "message": "i",
-      "author": "Visitor",
-      "createdAt": 1612041487192,
-      "image": " ",
-      "id": 33
-    },
-    {
-      "message": "wix",
-      "author": "Visitor",
-      "createdAt": 1612041531084,
-      "image": " ",
-      "id": 34
-    },
-    {
-      "message": "You can learn more about wix on my website, feel free to browse!",
-      "author": "chatbot",
-      "createdAt": 1612041531142,
-      "image": " ",
-      "id": 35
-    },
-    {
-      "message": "wix",
-      "author": "Visitor",
-      "createdAt": 1612041795022,
-      "image": " ",
-      "id": 36
-    },
-    {
-      "message": "Wix is a platform for creating websites. Click on the banner on top of the page to get started",
-      "author": "chatbot",
-      "createdAt": 1612041795074,
-      "image": " ",
-      "id": 37
-    },
-    {
-      "message": " interested",
-      "author": "Visitor",
-      "createdAt": 1612041804027,
-      "image": " ",
-      "id": 38
-    },
-    {
-      "message": "Glad we share some common interests! Please, let me know what you thing and my team will get back to you soon",
-      "author": "chatbot",
-      "createdAt": 1612041804062,
-      "image": " ",
-      "id": 39
-    },
-    {
-      "message": "interested in plans",
-      "author": "Visitor",
-      "createdAt": 1612041872630,
-      "image": " ",
-      "id": 40
-    },
-    {
-      "message": "I see you would like to start out small journey. Please, check the ZPricing Plans information by moving to the relevant page",
-      "author": "chatbot",
-      "createdAt": 1612041872657,
-      "image": " ",
-      "id": 41
-    },
-    {
-      "message": "Glad we share some common interests! Please, let me know what you think and my team will get back to you soon",
-      "author": "chatbot",
-      "createdAt": 1612041872658,
-      "image": " ",
-      "id": 42
     }
   ],
   "phones": [

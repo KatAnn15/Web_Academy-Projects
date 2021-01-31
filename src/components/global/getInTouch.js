@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 
 export default class GetInTouch extends React.Component {
   constructor() {
@@ -11,17 +12,21 @@ export default class GetInTouch extends React.Component {
     };
     this.button = React.createRef();
     this.form = React.createRef();
+    this.url = isMobile
+      ? "http://192.168.1.7:4000/posts"
+      : "http://localhost:4000/posts";
   }
 
   postData = (e) => {
     const formData = new FormData(this.form.current);
     e.preventDefault();
-    return fetch("http://localhost:4000/posts", {
+    return fetch(this.url, {
       method: "POST",
       body: formData,
     })
       .then((resp) => {
         console.log(resp);
+        e.target.reset();
         return resp.json();
       })
       .then((data) => {

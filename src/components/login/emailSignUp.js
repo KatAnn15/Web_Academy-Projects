@@ -1,5 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
+import { isMobile } from "react-device-detect";
 
 export default class EmailSignUpForm extends React.Component {
   constructor() {
@@ -10,6 +11,9 @@ export default class EmailSignUpForm extends React.Component {
     this.form = React.createRef();
     this.email = React.createRef();
     this.name = React.createRef();
+    this.url = isMobile
+      ? "http://192.168.1.7:4000/contacts"
+      : "http://localhost:4000/contacts";
   }
   onFormSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +21,7 @@ export default class EmailSignUpForm extends React.Component {
     const name = this.name.current.value;
     const uuid = uuidv4();
 
-    fetch("http://localhost:4000/contacts")
+    fetch(this.url)
       .then((resp) => resp.json())
       .then((data) => {
         let contacts = data;
@@ -35,7 +39,7 @@ export default class EmailSignUpForm extends React.Component {
       });
   };
   newMember = (email, name, uuid) => {
-    fetch("http://localhost:4000/contacts", {
+    fetch(this.url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

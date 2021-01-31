@@ -26,6 +26,9 @@ export default class ContactHome extends React.Component {
     this.form = React.createRef();
     this.prefix = React.createRef();
     this.phone = React.createRef();
+    this.url = isMobile
+      ? "http://192.168.1.7:4000/phones"
+      : "http://localhost:4000/phones";
   }
   componentDidMount = () => {
     this.resizeScreen();
@@ -65,7 +68,7 @@ export default class ContactHome extends React.Component {
       return this.setState({ prefixError: "active" });
     } else {
       console.log("Data is correct, start fetching");
-      return fetch("http://localhost:4000/phones", {
+      return fetch(this.url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

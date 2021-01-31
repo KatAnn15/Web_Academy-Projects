@@ -7,6 +7,7 @@ import closeEmoji from "../../../assets/images/global-imgs/close-emoji.webp";
 import { ChatStory } from "./chat-story";
 import { Message } from "./message";
 import { Reply } from "./reply";
+import { isMobile } from "react-device-detect";
 
 export class ChatBody extends React.Component {
   constructor() {
@@ -15,30 +16,57 @@ export class ChatBody extends React.Component {
       ascend: false,
       emojiExpanded: false,
       chatList: [],
+      emoji: "",
     };
     this.newItem = React.createRef();
+    this.list = React.createRef();
+    this.url = isMobile
+      ? "http://192.168.1.7:4000/messages"
+      : "http://localhost:4000/messages";
   }
   fetchData = () => {
-    return fetch("http://localhost:4000/messages")
+    return fetch(this.url)
       .then((resp) => resp.json())
       .then((data) => {
         const chatList = [];
         data.forEach((message, i) => {
-          const image = message.image.replace(/'[../src]'/g, "..");
+          if (message.author !== "system") {
+            console.log(message.author);
+            console.log(message);
+            const date = message.createdAt - data[--i].createdAt;
+            if (date > 86400000 || message.id === 2) {
+              chatList.push(
+                <Message
+                  message={`Posted on ${message.date}`}
+                  key={`system-message ${i}`}
+                  data={"system-data"}
+                  item={"system-item"}
+                  attachment={message.image}
+                />
+              );
+            }
+          }
           chatList.push(
             <Message
               message={message.message}
-              key={i}
+              key={message.createdAt}
               data={
-                message.author === "chatbot" ? "reply-data" : "message-data"
+                message.author === "chatbot"
+                  ? "reply-data"
+                  : message.author === "system"
+                  ? "system-data"
+                  : "message-data"
               }
               item={
-                message.author === "Visitor" ? "message-item" : "reply-item"
+                message.author === "Visitor"
+                  ? "message-item"
+                  : message.author === "system"
+                  ? "system-item"
+                  : "reply-item"
               }
-              attachment={message.image === " " ? "null" : image}
+              attachment={message.image}
             />
           );
-          console.log(message.image);
         });
         this.setState({ chatList: chatList });
       });
@@ -50,11 +78,10 @@ export class ChatBody extends React.Component {
     this.state.emojiExpanded
       ? this.setState({ emojiExpanded: false })
       : this.setState({ emojiExpanded: true });
-    console.log(this.state.emojiExpanded);
   };
   replyWrapper = (reply) => {
     console.log(reply);
-    fetch("http://localhost:4000/messages", {
+    fetch(this.url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -79,6 +106,7 @@ export class ChatBody extends React.Component {
           ref={this.newItem}
           data={"message-data"}
           item={"message-item"}
+          attachment={data.image ? data.image : undefined}
         />,
       ],
     });
@@ -86,13 +114,21 @@ export class ChatBody extends React.Component {
       this.props.reduceInfo();
     }
     let reply;
-    const wordTriggers = ["wix", "foxfit", "plans", "interested", "bye"];
+    const wordTriggers = [
+      "wix",
+      "foxfit",
+      "plans",
+      "interested",
+      "bye",
+      "thanks",
+    ];
     const replies = [
       "Wix is a platform for creating websites. Click on the banner on top of the page to get started",
       "FoxFit is my project for motivating prople to stay active and improving their healt. Contact me if you are insterested!",
       "I see you would like to start out small journey. Please, check the Pricing Plans information by moving to the relevant page",
       "Glad we share some common interests! Please, let me know what you think and my team will get back to you soon",
-      "Hope you are having a great day!",
+      "Hope you have a great day!",
+      "My pleasure to help :)",
     ];
     if (data.message.includes("hello")) {
       reply =
@@ -115,11 +151,15 @@ export class ChatBody extends React.Component {
       });
     }
   };
+  addEmoji = (emoji) => {
+    this.setState({ emoji: emoji.emoji });
+    console.log(emoji.emoji);
+  };
   render() {
     return (
       <div className="chat-body" style={this.props.bodyStyle}>
-        <ChatStory chatList={this.state.chatList} />
-        {this.state.emojiExpanded ? <Emoji /> : null}
+        <ChatStory chatList={this.state.chatList} list={this.list} />
+        {this.state.emojiExpanded ? <Emoji addEmoji={this.addEmoji} /> : null}
         {this.state.ascend ? null : (
           <div className="free-ascend-banner">
             Powered by
@@ -135,6 +175,7 @@ export class ChatBody extends React.Component {
           image={this.state.emojiExpanded ? closeEmoji : emojiIcon}
           expandPicker={this.expandPicker}
           onSuccessCallback={this.updateList}
+          emoji={this.state.emoji}
         />
       </div>
     );

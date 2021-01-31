@@ -9,7 +9,9 @@ export class ChatWidget extends React.Component {
       isExpanded: false,
       device: "desktop",
       reducedInfo: false,
+      closeClicked: false,
     };
+    this.url = isMobile ? "http://192.168.1.7:4000" : "http://localhost:4000";
   }
   expand = () => {
     isMobile
@@ -17,8 +19,30 @@ export class ChatWidget extends React.Component {
       : this.setState({ isExpanded: true });
     this.setState({ isExpanded: true });
   };
+  closeClicked = () => {
+    this.state.closeClicked
+      ? this.setState({ closeClicked: false })
+      : this.setState({ closeClicked: true });
+  };
   collapse = () => {
     this.setState({ isExpanded: false });
+    this.setState({ closeClicked: false });
+  };
+  deleteHistory = () => {
+    fetch(`${this.url}/messages`)
+      .then((resp) => resp.json())
+      .then((data) => {
+        data.forEach((item) => {
+          if (item.id > 1) {
+            fetch(`${this.url}/messages/${item.id}`, {
+              method: "DELETE",
+            }).then(() => {
+              console.log("Chat history has been deleted");
+              this.collapse();
+            });
+          }
+        });
+      });
   };
   reduceInfo = () => {
     this.setState({ reducedInfo: true });
@@ -30,16 +54,29 @@ export class ChatWidget extends React.Component {
         <div className="chat-widget">
           {this.state.isExpanded ? (
             <div className={`chat-${this.state.device}_expanded`}>
-              <button className="chat-_collapse" onClick={this.collapse}>
+              <button className="chat_collapse" onClick={this.closeClicked}>
                 &times;
               </button>
+              {this.state.closeClicked ? (
+                <div className="close-action-bar">
+                  <button
+                    className="chat__clear-history"
+                    onClick={this.deleteHistory}
+                  >
+                    Delete History
+                  </button>
+                  <button className="chat__close-chat" onClick={this.collapse}>
+                    Close chat
+                  </button>
+                </div>
+              ) : null}
               <div className="chat_expanded__wrapper">
                 <div
                   className="chat_expanded__info"
                   style={
                     this.state.reducedInfo
                       ? { height: "65px", padding: "10px", display: "flex" }
-                      : { height: "auto" }
+                      : {}
                   }
                 >
                   <img
@@ -67,7 +104,11 @@ export class ChatWidget extends React.Component {
                       className="chat_expanded__title"
                       style={
                         this.state.reducedInfo
-                          ? { fontSize: "14px", lineHeight: "18px" }
+                          ? {
+                              fontSize: "14px",
+                              lineHeight: "18px",
+                              paddingLeft: "25px",
+                            }
                           : { fontSize: "auto" }
                       }
                     >
@@ -99,9 +140,11 @@ export class ChatWidget extends React.Component {
                 <ChatBody
                   reduceInfo={this.reduceInfo}
                   bodyStyle={
-                    this.state.reducedInfo
-                      ? { height: "400px" }
-                      : { height: "270px" }
+                    isMobile
+                      ? {}
+                      : this.state.reducedInfo
+                      ? { height: "490px" }
+                      : { height: "290px" }
                   }
                 />
               </div>
@@ -109,7 +152,7 @@ export class ChatWidget extends React.Component {
           ) : isMobile ? (
             <div className="chat-mobile_regular" onClick={this.expand}>
               <div className="chat-mobile_regular__wrapper">
-                <span>...</span>
+                <span></span>
               </div>
             </div>
           ) : (

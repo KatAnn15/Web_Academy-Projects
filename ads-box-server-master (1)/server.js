@@ -56,7 +56,7 @@ server.post("/messages", (req, res, next) => {
     // For Windows: Some changes in file path
     req.body.image = req.file.path.replace(/\\/g, "/").replace("public/", "");
   } else {
-    req.body.image = " ";
+    req.body.image = "";
   }
   next();
 });

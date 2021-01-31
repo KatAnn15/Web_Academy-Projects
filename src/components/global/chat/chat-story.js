@@ -13,6 +13,10 @@ export class ChatStory extends React.Component {
     }
   };
   render() {
-    return <div className="chat-list">{this.state.chatList}</div>;
+    return (
+      <div className="chat-list" ref={this.props.list}>
+        {this.state.chatList}
+      </div>
+    );
   }
 }

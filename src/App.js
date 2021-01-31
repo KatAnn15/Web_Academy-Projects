@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { isMobile } from "react-device-detect";
 import "./scss/base_scss/index.scss";
 
 import Header from "./components/global/header";
@@ -11,6 +12,7 @@ import Login from "./components/login/login";
 import Banner from "./components/global/banner";
 import { createBrowserHistory } from "history";
 import { ChatWidget } from "./components/global/chat/chat";
+import { BackToTop } from "./components/global/back-to-top";
 
 function App() {
   const history = createBrowserHistory();
@@ -27,6 +29,7 @@ function App() {
           <Route exact path="/login" element={<Login />} />
         </Routes>
       </Router>
+      {isMobile ? <BackToTop /> : null}
       <ChatWidget />
     </div>
   );

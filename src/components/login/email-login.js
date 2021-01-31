@@ -1,5 +1,6 @@
 import React from "react";
 import { v4 as uuidv4 } from "uuid";
+import { isMobile } from "react-device-detect";
 
 export default class EmailLoginForm extends React.Component {
   constructor() {
@@ -9,11 +10,14 @@ export default class EmailLoginForm extends React.Component {
     this.state = {
       notYetMember: false,
     };
+    this.url = isMobile
+      ? "http://192.168.1.7:4000/contacts"
+      : "http://localhost:4000/contacts";
   }
   onFormSubmit = (e) => {
     e.preventDefault();
     let email = this.email.current.value;
-    fetch("http://localhost:4000/contacts")
+    fetch(this.url)
       .then((resp) => resp.json())
       .then((data) => {
         let contacts = data;

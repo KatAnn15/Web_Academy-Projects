@@ -5,10 +5,10 @@ export class Message extends React.Component {
     return (
       <div className={this.props.data}>
         <h5 className={this.props.item}>{this.props.message}</h5>
-        {this.props.attachment !== "null" ? (
+        {this.props.attachment ? (
           <img
             className="attachment"
-            src={`${this.props.attachment}`}
+            src={`${this.props.attachment.replace(/'[../src]'/g, "..")}`}
             alt="message attachment"
           />
         ) : null}
