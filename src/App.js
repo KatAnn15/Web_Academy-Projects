@@ -24,9 +24,8 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/meet-emily" element={<MeetEmily />} />
-          <Route exact path="/foxfit" element={<FoxFit />} />
-          <Route exact path="/plans-pricing" element={<PlansAndPricing />} />
-          <Route exact path="/login" element={<Login />} />
+          <Route path="/foxfit" element={<FoxFit />} />
+          <Route path="/plans-pricing" element={<PlansAndPricing />} />
         </Routes>
       </Router>
       {isMobile ? <BackToTop /> : null}

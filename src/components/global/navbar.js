@@ -1,8 +1,9 @@
 import React from "react";
 import { NavHashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import login from "../../assets/images/global-imgs/login.png";
-import Login from "../login/login";
 import { isMobile } from "react-device-detect";
+import { Login } from "../login/login";
 
 export default class Navbar extends React.Component {
   constructor() {
@@ -10,6 +11,7 @@ export default class Navbar extends React.Component {
     this.state = {
       menuClass: "navbar__inactive",
       buttonClass: "button__inactive",
+      openLogin: false,
     };
   }
   openMenu = () => {
@@ -21,9 +23,13 @@ export default class Navbar extends React.Component {
       this.state.buttonClass === "button__inactive"
         ? this.setState({ buttonClass: "button__active" })
         : this.setState({ buttonClass: "button__inactive" });
-    } else {
-      console.log("Active");
     }
+  };
+  openLogin = () => {
+    this.setState({ openLogin: true });
+  };
+  closeLogin = () => {
+    this.setState({ openLogin: false });
   };
   render() {
     return (
@@ -36,10 +42,9 @@ export default class Navbar extends React.Component {
         <div className={`app__navbar ${this.state.menuClass}`}>
           <div className="navbar__list">
             {isMobile ? (
-              <NavHashLink
+              <button
                 className="navbar__link link_login"
-                to="/login"
-                onClick={this.openMenu}
+                onClick={this.openLogin}
               >
                 <img
                   className="login-icon"
@@ -48,10 +53,11 @@ export default class Navbar extends React.Component {
                   alt="member-icon"
                 />
                 Log In
-              </NavHashLink>
+              </button>
             ) : null}
             <NavHashLink
               className="navbar__link link_home"
+              activeStyle={{ color: "#89aeb3" }}
               to={"/home"}
               onClick={this.openMenu}
             >
@@ -59,6 +65,7 @@ export default class Navbar extends React.Component {
             </NavHashLink>
             <NavHashLink
               className="navbar__link link_meet-emily"
+              activeStyle={{ color: "#89aeb3" }}
               to={"/meet-emily"}
               onClick={this.openMenu}
             >
@@ -66,6 +73,7 @@ export default class Navbar extends React.Component {
             </NavHashLink>
             <NavHashLink
               className="navbar__link link_fox-fit"
+              activeStyle={{ color: "#89aeb3" }}
               to={"/foxfit"}
               onClick={this.openMenu}
             >
@@ -73,6 +81,7 @@ export default class Navbar extends React.Component {
             </NavHashLink>
             <NavHashLink
               className="navbar__link link_plans-pricing"
+              activeStyle={{ color: "#89aeb3" }}
               to={"/plans-pricing"}
               onClick={this.openMenu}
             >
@@ -80,13 +89,20 @@ export default class Navbar extends React.Component {
             </NavHashLink>
             <NavHashLink
               className="navbar__link link_contact"
+              activeStyle={{ color: "#89aeb3" }}
               to={"/home#contact-anchor"}
               onClick={this.openMenu}
             >
               Contact
             </NavHashLink>
+            {this.state.openLogin ? (
+              <Login closeLogin={this.closeLogin} />
+            ) : null}
             {isMobile ? null : (
-              <NavHashLink className="navbar__link link_login" to="/login">
+              <button
+                className="navbar__link link_login"
+                onClick={this.openLogin}
+              >
                 <img
                   className="login-icon"
                   src={login}
@@ -94,7 +110,7 @@ export default class Navbar extends React.Component {
                   alt="member-icon"
                 />
                 Log In
-              </NavHashLink>
+              </button>
             )}
           </div>
         </div>

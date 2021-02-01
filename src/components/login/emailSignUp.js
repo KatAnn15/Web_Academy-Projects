@@ -36,7 +36,12 @@ export default class EmailSignUpForm extends React.Component {
           this.newMember(email, name, uuid);
           this.setState({ alreadyMember: false });
         }
+        this.props.closeLogin();
+        this.props.data.push(true, email);
       });
+  };
+  closeLogin = () => {
+    return this.props.closeLogin;
   };
   newMember = (email, name, uuid) => {
     fetch(this.url, {

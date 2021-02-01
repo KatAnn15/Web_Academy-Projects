@@ -31,7 +31,12 @@ export default class EmailLoginForm extends React.Component {
         } else {
           this.setState({ notYetMember: true });
         }
+        this.props.closeLogin();
+        this.props.data.push(true, email);
       });
+  };
+  closeLogin = () => {
+    return this.props.closeLogin;
   };
   render() {
     return (

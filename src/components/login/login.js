@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import facebook_Icon from "../../assets/images/global-imgs/sign-up/facebook-icon.png";
 import google_Icon from "../../assets/images/global-imgs/sign-up/google-logo.jpg";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
@@ -8,7 +7,7 @@ import EmailLoginForm from "./email-login";
 import { isMobile } from "react-device-detect";
 import EmailSignUpForm from "./emailSignUp";
 
-export default class Login extends React.Component {
+export class Login extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -53,6 +52,9 @@ export default class Login extends React.Component {
         } else {
           this.newMember(resp, resp.userID);
         }
+        //this.closeLogin();
+        const thisData = "hi";
+        this.props.getData(thisData);
       });
   };
   responseGoogle = (response) => {
@@ -72,7 +74,14 @@ export default class Login extends React.Component {
         } else {
           this.newMember(response.profileObj, response.profileObj.googleId);
         }
+        this.closeLogin();
+        console.log(response.profileObj.email);
+        const thisData = [true, response.profileObj.email];
+        this.props.getData(thisData);
       });
+  };
+  closeLogin = () => {
+    return this.props.closeLogin();
   };
 
   updateMember = (response, id) => {
@@ -130,6 +139,7 @@ export default class Login extends React.Component {
       callback={this.responseFacebook}
     />;
   };
+
   render() {
     return (
       <div className="login-lightbox">
@@ -203,9 +213,15 @@ export default class Login extends React.Component {
               <hr /> or <hr id="hr-right" />
             </span>
             {this.state.emailLogin && this.state.logInMode ? (
-              <EmailLoginForm />
+              <EmailLoginForm
+                closeLogin={this.closeLogin}
+                data={this.props.data}
+              />
             ) : this.state.emailLogin && this.state.logInMode === false ? (
-              <EmailSignUpForm />
+              <EmailSignUpForm
+                closeLogin={this.closeLogin}
+                data={this.props.data}
+              />
             ) : (
               <button
                 className="login-box_btn email-btn"
@@ -215,7 +231,10 @@ export default class Login extends React.Component {
               </button>
             )}
           </div>
-          <button className="lightbox__close-btn" onClick={() => window.back}>
+          <button
+            className="lightbox__close-btn"
+            onClick={this.props.closeLogin}
+          >
             &times;{" "}
           </button>
         </div>
@@ -223,3 +242,5 @@ export default class Login extends React.Component {
     );
   }
 }
+
+export default Login;

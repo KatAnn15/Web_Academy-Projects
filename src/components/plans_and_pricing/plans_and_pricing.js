@@ -5,7 +5,7 @@ import GetInTouch from "../global/getInTouch";
 import PricingPlansWidget from "./pricing-plans-widget";
 import CheckoutPage from "./checkoutPlans";
 
-export default class PlansAndPricing extends React.Component {
+export class PlansAndPricing extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -23,6 +23,7 @@ export default class PlansAndPricing extends React.Component {
   componentDidMount = () => {
     window.scrollTo(0, 0);
   };
+
   render() {
     return (
       <div className="page__container">
@@ -43,3 +44,4 @@ export default class PlansAndPricing extends React.Component {
     );
   }
 }
+export default PlansAndPricing;

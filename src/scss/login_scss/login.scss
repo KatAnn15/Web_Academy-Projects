@@ -5,8 +5,9 @@
   height: 100vh;
   background-color: rgb(255, 255, 255);
   z-index: 50;
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,12 +18,14 @@
         font-weight: 100;
         color: rgba(41, 36, 36, 0.842);
         line-height: 80px;
+        text-align: center;
       }
       &__subtitle {
         font-size: 18px;
         font-weight: 100;
         color: rgba(41, 36, 36, 0.842);
         cursor: pointer;
+        text-align: center;
       }
       &__action-bar {
         display: flex;
@@ -81,6 +84,7 @@
     }
     .lightbox__close-btn {
       position: absolute;
+      width: 23px;
       font-size: 40px;
       top: 60px;
       right: 80px;
