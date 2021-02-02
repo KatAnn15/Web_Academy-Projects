@@ -25,8 +25,8 @@ export default class CheckoutSignUp extends React.Component {
   closeLogin = () => {
     this.setState({ openLogin: false });
   };
-  getData = (data) => {
-    console.log(data);
+  sendData = (data) => {
+    this.props.sendData(data);
   };
   render() {
     return (
@@ -41,7 +41,7 @@ export default class CheckoutSignUp extends React.Component {
           </p>
           <div className="checkout__sign-up__action-bar">
             {this.state.openLogin ? (
-              <Login closeLogin={this.closeLogin} getData={this.getData} />
+              <Login closeLogin={this.closeLogin} sendData={this.sendData} />
             ) : null}
             <button
               Sign

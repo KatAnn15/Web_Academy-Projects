@@ -8,7 +8,7 @@ export default class CheckoutPage extends React.Component {
     super();
     this.state = {
       isMember: false,
-      email: [],
+      email: "",
     };
   }
   componentDidMount = () => {
@@ -17,22 +17,24 @@ export default class CheckoutPage extends React.Component {
   logOut = () => {
     this.setState({ isMember: false });
   };
-  componentDidUpdate = () => {
-    console.log("Hello this wonderful world");
-    // const { getData } = this.props;
-    // console.log(getData);
-    // this.getData();
-  };
+  componentDidUpdate = () => {};
   fetchData = () => {
     const fetchedData = require("../../assets/json/contacts.json");
     const contactData = fetchedData.contacts;
     const memberData = contactData[0];
     this.setState({ email: memberData });
   };
-  getData = (data) => {
-    this.setState({ isMember: data[0] });
-    this.setState({ email: data[1] });
+  sendData = (data) => {
+    console.log("This is the final data: ", data);
+    const email = data[0];
+    this.setStates(email);
   };
+
+  setStates = (recievedEmail) => {
+    this.setState({ email: recievedEmail });
+    this.setState({ isMember: true });
+  };
+
   render() {
     return (
       <div className="checkout-widget">
@@ -51,7 +53,7 @@ export default class CheckoutPage extends React.Component {
                 logOut={this.logOut}
               />
             ) : (
-              <CheckoutSignUp getData={this.getData} />
+              <CheckoutSignUp sendData={this.sendData} />
             )}
           </div>
           <div className="checkout__order-summary">

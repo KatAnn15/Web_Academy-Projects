@@ -28,11 +28,11 @@ export default class EmailLoginForm extends React.Component {
         });
         if (emails.indexOf(email) > -1) {
           console.log("Welcome, ", contacts[emails.indexOf(email)].name);
+          this.props.sendData([email]);
+          this.closeLogin();
         } else {
           this.setState({ notYetMember: true });
         }
-        this.props.closeLogin();
-        this.props.data.push(true, email);
       });
   };
   closeLogin = () => {

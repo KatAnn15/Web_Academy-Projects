@@ -12,7 +12,9 @@ export default class Navbar extends React.Component {
       menuClass: "navbar__inactive",
       buttonClass: "button__inactive",
       openLogin: false,
+      status: "Log In",
     };
+    this.button = React.createRef();
   }
   openMenu = () => {
     if (isMobile) {
@@ -35,7 +37,11 @@ export default class Navbar extends React.Component {
     return (
       <div className="common-wrapper">
         {isMobile ? (
-          <button className={this.state.buttonClass} onClick={this.openMenu}>
+          <button
+            className={this.state.buttonClass}
+            onClick={this.openMenu}
+            style={this.state.openLogin ? { opacity: 0 } : { opacity: 1 }}
+          >
             <span></span>
           </button>
         ) : null}
@@ -52,7 +58,7 @@ export default class Navbar extends React.Component {
                   width="27px"
                   alt="member-icon"
                 />
-                Log In
+                {this.state.status}
               </button>
             ) : null}
             <NavHashLink
@@ -88,8 +94,8 @@ export default class Navbar extends React.Component {
               Plans & Pricing
             </NavHashLink>
             <NavHashLink
+              smooth
               className="navbar__link link_contact"
-              activeStyle={{ color: "#89aeb3" }}
               to={"/home#contact-anchor"}
               onClick={this.openMenu}
             >
@@ -109,7 +115,7 @@ export default class Navbar extends React.Component {
                   width="27px"
                   alt="member-icon"
                 />
-                Log In
+                {this.state.status}
               </button>
             )}
           </div>

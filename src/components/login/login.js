@@ -52,9 +52,8 @@ export class Login extends React.Component {
         } else {
           this.newMember(resp, resp.userID);
         }
-        //this.closeLogin();
-        const thisData = "hi";
-        this.props.getData(thisData);
+        this.props.sendData([resp.email]);
+        this.closeLogin();
       });
   };
   responseGoogle = (response) => {
@@ -74,10 +73,8 @@ export class Login extends React.Component {
         } else {
           this.newMember(response.profileObj, response.profileObj.googleId);
         }
+        this.props.sendData([response.profileObj.email]);
         this.closeLogin();
-        console.log(response.profileObj.email);
-        const thisData = [true, response.profileObj.email];
-        this.props.getData(thisData);
       });
   };
   closeLogin = () => {
@@ -215,12 +212,12 @@ export class Login extends React.Component {
             {this.state.emailLogin && this.state.logInMode ? (
               <EmailLoginForm
                 closeLogin={this.closeLogin}
-                data={this.props.data}
+                sendData={this.props.sendData}
               />
             ) : this.state.emailLogin && this.state.logInMode === false ? (
               <EmailSignUpForm
                 closeLogin={this.closeLogin}
-                data={this.props.data}
+                sendData={this.props.sendData}
               />
             ) : (
               <button
@@ -235,7 +232,7 @@ export class Login extends React.Component {
             className="lightbox__close-btn"
             onClick={this.props.closeLogin}
           >
-            &times;{" "}
+            &times;
           </button>
         </div>
       </div>
