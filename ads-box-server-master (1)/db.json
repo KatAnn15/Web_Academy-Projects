@@ -56,6 +56,12 @@
       "name": "Bleee",
       "id": "343f7952-4bb9-45eb-8e8f-23e3f6eee470",
       "createdAt": 1612289201685
+    },
+    {
+      "email": "killi@gmail.com",
+      "name": "Killi",
+      "id": "25874e82-b6db-48f7-9285-9e0822af57c1",
+      "createdAt": 1612373878613
     }
   ],
   "posts": [
@@ -95,21 +101,6 @@
       "image": "",
       "authorImage": "src/assets/images/user-uploads/1612083029046-peonies.jpg",
       "id": 1
-    },
-    {
-      "message": "hello",
-      "author": "Visitor",
-      "date": "Tuesday, February 2, 2021, 6:40:28 PM",
-      "createdAt": 1612284029025,
-      "image": "",
-      "id": 2
-    },
-    {
-      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
-      "author": "chatbot",
-      "createdAt": 1612284029062,
-      "image": "",
-      "id": 3
     }
   ],
   "phones": [

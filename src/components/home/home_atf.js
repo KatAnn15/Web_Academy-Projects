@@ -12,9 +12,13 @@ export default class AboveTheFold extends React.Component {
     super();
     this.state = {
       socialData: [],
+      opacity: false,
     };
   }
   componentDidMount() {
+    setTimeout(() => {
+      this.setState({ opacity: true });
+    }, 300);
     this.fetchData();
   }
   fetchData() {
@@ -33,12 +37,35 @@ export default class AboveTheFold extends React.Component {
       );
     });
     return (
-      <div className="common-wrapper">
+      <div
+        className="common-wrapper"
+        style={
+          isMobile
+            ? {
+                opacity: this.state.opacity ? 1 : 0,
+                transition: "all 1.5s",
+              }
+            : { opacity: 1 }
+        }
+      >
         {isMobile ? (
           <Main
             data={
               <div className="common-wrapper">
-                <div className="above-the-fold__info">
+                <div
+                  className="above-the-fold__info"
+                  style={
+                    isMobile
+                      ? {
+                          opacity: this.state.opacity ? 1 : 0,
+                          transform: this.state.opacity
+                            ? "none"
+                            : "translateY(50px)",
+                          transition: "all .8s",
+                        }
+                      : { opacity: 1 }
+                  }
+                >
                   <h1 className="above-the-fold__title">Emily Fox</h1>
                   <h2 className="above-the-fold__subtitle">
                     Discover Your Power Through Online Coaching

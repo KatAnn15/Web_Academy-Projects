@@ -1,4 +1,5 @@
 import React from "react";
+import { isMobile } from "react-device-detect";
 import HeaderStrip from "../global/headerStrip";
 import Footer from "../global/footer";
 import GetInTouch from "../global/getInTouch";
@@ -15,10 +16,22 @@ export default class FoxFit extends React.Component {
     this.state = {
       foxFitData: {},
       foxFitPerks: [],
+      opacity: false,
+      show: false,
     };
+    this.show = React.createRef();
   }
   componentDidMount() {
     window.scrollTo(0, 0);
+    setTimeout(() => {
+      this.setState({ opacity: true });
+    }, 300);
+    let offset = this.show.current.offsetTop - 100;
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > offset) {
+        this.setState({ show: true });
+      }
+    });
     this.getJsonData();
   }
   getJsonData() {
@@ -51,7 +64,20 @@ export default class FoxFit extends React.Component {
     return (
       <div className="page__container">
         <HeaderStrip info={"About FoxFit"} />
-        <div className={`strip-wrapper strip__${stripName}`}>
+        <div
+          className={`strip-wrapper strip__${stripName}`}
+          style={
+            isMobile
+              ? {
+                  opacity: this.state.opacity ? 1 : 0,
+                  transform: this.state.opacity
+                    ? "translateY(0)"
+                    : "translateY(50px)",
+                  transition: "all 1s",
+                }
+              : { opacity: 1 }
+          }
+        >
           <div className="fox-fit__container">
             <div className="strip-info__fox-wrapper">
               <h2 className={`strip__${stripName}__info_title`}>{title}</h2>
@@ -63,7 +89,21 @@ export default class FoxFit extends React.Component {
               </p>
             </div>
 
-            <div className="why-foxFit">
+            <div
+              className="why-foxFit"
+              ref={this.show}
+              style={
+                isMobile
+                  ? {
+                      opacity: this.state.show ? 1 : 0,
+                      transform: this.state.show
+                        ? "translateY(0)"
+                        : "translateY(50px)",
+                      transition: "all 1s",
+                    }
+                  : { opacity: 1 }
+              }
+            >
               <div className="why-foxFit__info">
                 <h2 className="why-foxFit__info__title">Why FoxFit</h2>
                 <div className="why-foxFit__info-wrapper">{perks}</div>

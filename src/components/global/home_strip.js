@@ -35,8 +35,14 @@ export default class HomeMainStrip extends React.Component {
     super();
     this.state = {
       visibleText: true,
+      opacity: false,
     };
   }
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({ opacity: true });
+    }, 300);
+  };
   render() {
     const {
       stripName,
@@ -47,7 +53,21 @@ export default class HomeMainStrip extends React.Component {
       title,
     } = this.props;
     return (
-      <div className={`page-strip strip_${stripName}`}>
+      <div
+        className={`page-strip strip_${stripName}`}
+        ref={this.div}
+        style={
+          isMobile
+            ? {
+                opacity: this.state.opacity ? 1 : 0,
+                transform: this.state.opacity
+                  ? "translateY(0)"
+                  : "translateY(50px)",
+                transition: "all .8s",
+              }
+            : { opacity: 1 }
+        }
+      >
         <div className={`strip_${stripName}__wrapper`}>
           <div className={`strip-img img_${stripName}`}></div>
           <div className={`strip-info strip-info_${stripName}`}>

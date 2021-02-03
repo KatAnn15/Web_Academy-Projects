@@ -8,7 +8,6 @@ import Home from "./components/home/home";
 import MeetEmily from "./components/meet_emily/meet_emily";
 import FoxFit from "./components/fox_fit/fox_fit";
 import PlansAndPricing from "./components/plans_and_pricing/plans_and_pricing";
-import Login from "./components/login/login";
 import Banner from "./components/global/banner";
 import { createBrowserHistory } from "history";
 import { ChatWidget } from "./components/global/chat/chat";

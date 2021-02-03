@@ -1,33 +1,35 @@
 import React from "react";
 import { isMobile } from "react-device-detect";
-import TrackVisibility from "react-on-screen";
-
-const ComponentToTrack = ({ isVisible, info }) => {
-  const style = {
-    transition: "1s",
-    opacity: isVisible ? 1 : 0.5,
-    transform: isVisible ? "translate(0, 0)" : "translate(0, 0)",
-  };
-  return (
-    <div style={style} className="page__content">
-      <h1>{info}</h1>
-    </div>
-  );
-};
 
 export default class HeaderStrip extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      opacity: false,
+    };
+  }
+  componentDidMount = () => {
+    setTimeout(() => {
+      this.setState({ opacity: true });
+    }, 300);
+  };
   render() {
     return (
-      <div className="common-wrapper">
-        {isMobile ? (
-          <TrackVisibility>
-            <ComponentToTrack info={this.props.info} />
-          </TrackVisibility>
-        ) : (
-          <div className="page__content">
-            <h1>{this.props.info}</h1>
-          </div>
-        )}
+      <div
+        className="page__content"
+        style={
+          isMobile
+            ? {
+                opacity: this.state.opacity ? 1 : 0,
+                transform: this.state.opacity
+                  ? "translateY(0)"
+                  : "translateY(50px)",
+                transition: "all .5s",
+              }
+            : { opacity: 1 }
+        }
+      >
+        <h1>{this.props.info}</h1>
       </div>
     );
   }
