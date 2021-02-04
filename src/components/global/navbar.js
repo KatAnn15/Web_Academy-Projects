@@ -28,10 +28,16 @@ export default class Navbar extends React.Component {
     }
   };
   openLogin = () => {
-    this.setState({ openLogin: true });
+    this.state.status === "Log Out"
+      ? this.setState({ status: "Log In" })
+      : this.setState({ openLogin: true });
   };
   closeLogin = () => {
     this.setState({ openLogin: false });
+  };
+  sendData = (data) => {
+    console.log(data);
+    this.setState({ status: "Log Out" });
   };
   render() {
     return (
@@ -102,7 +108,7 @@ export default class Navbar extends React.Component {
               Contact
             </NavHashLink>
             {this.state.openLogin ? (
-              <Login closeLogin={this.closeLogin} />
+              <Login closeLogin={this.closeLogin} sendData={this.sendData} />
             ) : null}
             {isMobile ? null : (
               <button
