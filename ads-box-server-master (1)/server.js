@@ -13,7 +13,7 @@ const fileStorage = multer.diskStorage({
   filename: (req, file, cb) => {
     // For Windows: It is good for Unix systems: new Date().toISOString() + "-" + file.originalname
     // For Windows: This solution will be work under Windows
-    cb(null, Date.now() + "-" + file.originalname);
+    cb(null, file.originalname);
   },
 });
 const fileFilter = (req, file, cb) => {

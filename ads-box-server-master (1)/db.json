@@ -109,12 +109,38 @@
       "id": 1
     },
     {
-      "message": "hi!",
+      "message": "hello",
       "author": "Visitor",
-      "date": "Thursday, February 4, 2021, 6:45:34 PM",
-      "createdAt": 1612457134454,
-      "image": "",
+      "date": "Friday, February 5, 2021, 7:25:08 PM",
+      "createdAt": 1612545908971,
+      "image": "../src/assets/images/user-uploads/lightbox-img.jpg",
+      "authorImage": "src/assets/images/user-uploads/lightbox-img.jpg",
       "id": 2
+    },
+    {
+      "message": "Hi!  My name is Emily Fox and I am happy to have you here. Please, leave a message and I will contact you soon",
+      "author": "chatbot",
+      "createdAt": 1612545909017,
+      "image": "",
+      "id": 3
+    },
+    {
+      "message": "hi",
+      "author": "Visitor",
+      "date": "Friday, February 5, 2021, 7:28:13 PM",
+      "createdAt": 1612546093359,
+      "image": "../src/assets/images/user-uploads/kitty.png",
+      "authorImage": "src/assets/images/user-uploads/kitty.png",
+      "id": 4
+    },
+    {
+      "message": "bellisimo!",
+      "author": "Visitor",
+      "date": "Friday, February 5, 2021, 7:40:52 PM",
+      "createdAt": 1612546852290,
+      "image": "../src/assets/images/user-uploads/lightbox-img.jpg",
+      "authorImage": "src/assets/images/user-uploads/lightbox-img.jpg",
+      "id": 5
     }
   ],
   "phones": [

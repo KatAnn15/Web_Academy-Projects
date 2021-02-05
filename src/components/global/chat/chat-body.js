@@ -8,6 +8,7 @@ import { ChatStory } from "./chat-story";
 import { Message } from "./message";
 import { Reply } from "./reply";
 import { isMobile } from "react-device-detect";
+import firebase from "../../global/firebase";
 
 export class ChatBody extends React.Component {
   constructor() {
@@ -17,6 +18,7 @@ export class ChatBody extends React.Component {
       emojiExpanded: false,
       chatList: [],
       emoji: "",
+      imageList: null,
     };
     this.newItem = React.createRef();
     this.list = React.createRef();
@@ -29,10 +31,22 @@ export class ChatBody extends React.Component {
       .then((resp) => resp.json())
       .then((data) => {
         const chatList = [];
+
         data.forEach((message, i) => {
+          let cutImage = message.image.slice(34);
+          console.log(cutImage);
+          let imageSrc;
+          const imageList = this.state.imageList;
+          imageList.forEach((image) => {
+            if (image.name === cutImage) {
+              console.log(image);
+              imageSrc = image.url;
+            } else {
+              console.log("Bongo!");
+            }
+          });
+
           if (message.author !== "system") {
-            console.log(message.author);
-            console.log(message);
             const date = message.createdAt - data[--i].createdAt;
             if (date > 86400000 || message.id === 2) {
               chatList.push(
@@ -41,11 +55,12 @@ export class ChatBody extends React.Component {
                   key={`system-message ${i}`}
                   data={"system-data"}
                   item={"system-item"}
-                  attachment={message.image}
+                  attachment={""}
                 />
               );
             }
           }
+
           chatList.push(
             <Message
               message={message.message}
@@ -64,15 +79,38 @@ export class ChatBody extends React.Component {
                   ? "system-item"
                   : "reply-item"
               }
-              attachment={message.image}
+              attachment={imageSrc}
             />
           );
         });
         this.setState({ chatList: chatList });
       });
   };
+
   componentDidMount = () => {
-    this.fetchData();
+    this.fetchImages();
+  };
+  addImage = (newItem) => {
+    this.setState({ imageList: [...this.state.imageList, newItem] });
+  };
+  fetchImages = async () => {
+    await firebase
+      .storage()
+      .ref()
+      .child("images")
+      .listAll()
+      .then((resp) => {
+        const fetchedImages = [];
+        resp.items.forEach((item) => {
+          item.getDownloadURL().then((url) => {
+            fetchedImages.push({ name: item.name, url: url });
+            this.setState({ imageList: fetchedImages });
+          });
+        });
+        setTimeout(() => {
+          this.fetchData();
+        }, 500);
+      });
   };
   expandPicker = () => {
     this.state.emojiExpanded
@@ -80,7 +118,6 @@ export class ChatBody extends React.Component {
       : this.setState({ emojiExpanded: true });
   };
   replyWrapper = (reply) => {
-    console.log(reply);
     fetch(this.url, {
       method: "POST",
       headers: {
@@ -97,6 +134,15 @@ export class ChatBody extends React.Component {
       });
   };
   updateList = (data) => {
+    console.log(data);
+    let cutImage = data.image.slice(34);
+    let imageList = this.state.imageList;
+    let attachment;
+    imageList.forEach((image) => {
+      if (image.name === cutImage) {
+        attachment = image.url;
+      }
+    });
     this.setState({
       chatList: [
         ...this.state.chatList,
@@ -106,7 +152,7 @@ export class ChatBody extends React.Component {
           ref={this.newItem}
           data={"message-data"}
           item={"message-item"}
-          attachment={data.image ? data.image : undefined}
+          attachment={data.image ? attachment : undefined}
         />,
       ],
     });
@@ -176,6 +222,7 @@ export class ChatBody extends React.Component {
           expandPicker={this.expandPicker}
           onSuccessCallback={this.updateList}
           emoji={this.state.emoji}
+          newImage={this.addImage}
         />
       </div>
     );

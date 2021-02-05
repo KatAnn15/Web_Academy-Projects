@@ -2,12 +2,14 @@ import React from "react";
 import attachment from "../../../assets//images/global-imgs/attachment.png";
 import attachmentActive from "../../../assets//images/global-imgs/attachment-active.png";
 import { isMobile } from "react-device-detect";
+import firebase from "../../global/firebase";
 
 export class ChatInput extends React.Component {
   constructor() {
     super();
     this.state = {
       imageSelected: false,
+      file: null,
     };
     this.form = React.createRef();
     this.input = React.createRef();
@@ -46,8 +48,34 @@ export class ChatInput extends React.Component {
         console.log(err);
       });
   };
-  onFileSelected = () => {
+  onFileSelected = (e) => {
     this.setState({ imageSelected: true });
+    const file = e.target.files[0];
+    const name = e.target.files[0].name;
+    this.uploadFile(file, name);
+  };
+  uploadFile = (file, name) => {
+    const storage = firebase.storage();
+    const storageRef = storage.ref();
+    const newItem = storageRef.child(`images/${name}`);
+    const uploadTask = newItem.put(file);
+    uploadTask.on(
+      "STATE_CHANGED",
+      (snapshot) => {},
+      (error) => {
+        console.log(error);
+      },
+      () => {
+        storage
+          .ref("images")
+          .child(name)
+          .getDownloadURL()
+          .then((url) => {
+            console.log("Success!", url);
+            this.props.newImage({ name: name, url: url });
+          });
+      }
+    );
   };
 
   componentDidUpdate = () => {
