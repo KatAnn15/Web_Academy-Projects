@@ -117,6 +117,7 @@ export class ChatInput extends React.Component {
           <input
             type="file"
             name="image"
+            accept="image/*"
             onChange={this.onFileSelected}
             ref={this.file}
           />

@@ -61,12 +61,12 @@ export default class ContactHome extends React.Component {
       ) {
         phoneValid.push(item);
         console.log(phoneValid);
+      } else {
+        console.log("Invalid!");
       }
     });
-    if (phoneValid.length < 0 || this.phone.current.value.length < 4) {
-      console.log("Prefix is not correct: ");
-      return this.setState({ prefixError: "active" });
-    } else {
+    if (phoneValid.length > 0 && this.phone.current.value.length > 4) {
+      console.log(phoneValid);
       console.log("Data is correct, start fetching");
       return fetch(this.url, {
         method: "POST",
@@ -89,6 +89,10 @@ export default class ContactHome extends React.Component {
         .catch((err) => {
           console.log("This is error: ", err);
         });
+    } else {
+      console.log(phoneValid);
+      console.log("Prefix is not correct: ");
+      return this.setState({ prefixError: "active" });
     }
   }
 
